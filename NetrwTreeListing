@@ -1,0 +1,25 @@
+../
+jaredtulayan.xyz/
+| .bundle/
+| .git/
+| .jekyll-cache/
+| _data/
+| _drafts/
+| _includes/
+| _layouts/
+| _posts/
+| _projects/
+| assets/
+| vendor/
+| Gemfile
+| Makefile
+| log
+| .gitignore
+| 404.html
+| blog.html
+| index.html
+| projects.html
+| Gemfile.lock
+| README.md
+| about.md
+| _config.yml
