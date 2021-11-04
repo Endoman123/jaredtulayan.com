@@ -35,3 +35,5 @@ gem "jekyll-assets"
 # Autoprefixer
 gem "autoprefixer-rails"
 gem "webrick", "~> 1.7"
+
+gem "sassc", "~> 2.4"
