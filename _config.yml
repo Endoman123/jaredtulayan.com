@@ -4,7 +4,7 @@ description: >-
   Rutgers Computer Science student
 baseurl: ""
 url: ""
-domain: "jaredtulayan.xyz" # This is here for ease of access
+domain: "me.jaredtulayan.xyz" # This is here for ease of access
 permalink: /blog/:title:output_ext
 highlighter: none
 
