@@ -82,5 +82,8 @@ exclude:
   - Gemfile.lock
   - .sass-cache/
   - .jekyll-cache/
-  - assets/css/*/*
   - README.md
+
+# Include scss for things
+include:
+  - assets/css/*
