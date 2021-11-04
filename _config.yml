@@ -26,6 +26,7 @@ plugins:
   - jekyll-feed
   - autoprefixer-rails
   - jekyll-assets
+
 sass:
   sass_dir: 'assets/css'
 
