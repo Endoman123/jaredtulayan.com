@@ -13,7 +13,8 @@ simple instruments, and foley (SFX recordings).
 2. [HARDWARE](#hardware)
 3. [ACOUSTICS](#acoustics)
 4. [INTERFERENCE](#interference)
-5. [CONCLUSION](#conclusion)
+5. [EXAMPLE](#example)
+6. [CONCLUSION](#conclusion)
 
 ## BUDGET
 One of the most important things to consider when designing anything is the budget you are willing to spend on it. 
@@ -128,5 +129,29 @@ There are many other things you can do to minimize interference (at least the in
 - Use LED lights instead of fluorescent fixtures; if you can simply get a floor lamp and use a LED lightbulb, that will eliminate
   hum that comes from flouorescent lights.
 
+## EXAMPLE
+For a real-life example of what this information would look like applied, take my apartment room and gear for example.
+
+{% include md/figure.html src="/assets/2021-11-04/room.jpg" figcaption="Corners of my room" width="25%" height="50%" mods="right" %}
+
+My recording hardware is a Marantz MPM-1000 cardiod microphone, paired with a Behringer UM2 audio interface.
+My apartment room is a small room, with a full-size bed and a band shirt on the wall. 
+It's hardwood flooring, with some type of softwood walls, and other furniture and things that fill up the space.
+Here are some examples of both vocal and instrumental recordings in this room:
+
+<audio src="/assets/2021-11-04/voice.mp3" controls preload></audio>
+<audio src="/assets/2021-11-04/inst.mp3" controls preload></audio>
+
+<br>
+
+Without much addition to my room, the quality of the recordings are already very nice. However, as you can tell there is still
+some reverb that gets through the mic, particularly where I clap and snap. There are many ways to solve this issue. Personally,
+I would consider putting some type of acoustic panel above my bed to dampen the reflections that come from there. My ceiling is hard
+to pad, but a way of doing it could be to hang something on some stands above my head.
+
 ## CONCLUSION
-My apartment room is small. It has no 
+
+I hope that this guide provides some information on how to go about spending your money and setting up your room
+for recording audio. There are plenty of other sources online if you want more information on anything in specific
+that was covered in this guide. Be sure to also visit forums if you need other opinions on choices regarding audio
+considerations or recording hardware.
