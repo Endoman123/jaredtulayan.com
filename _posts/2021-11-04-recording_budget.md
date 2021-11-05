@@ -149,6 +149,11 @@ some reverb that gets through the mic, particularly where I clap and snap. There
 I would consider putting some type of acoustic panel above my bed to dampen the reflections that come from there. My ceiling is hard
 to pad, but a way of doing it could be to hang something on some stands above my head.
 
+In terms of hardware, the cost is about $70, $30 for my audio interface and $40 for my microphone.
+In terms of dedicated acoustic paneling, the cost is another $20, which brings the total of this project to just under $100.
+
+Depending on your needs as well as where/how you source your hardware you may be able to spend less.
+
 ## CONCLUSION
 
 I hope that this guide provides some information on how to go about spending your money and setting up your room
