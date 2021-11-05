@@ -6,7 +6,7 @@ baseurl: ""
 url: ""
 domain: "me.jaredtulayan.xyz" # This is here for ease of access
 permalink: /blog/:title:output_ext
-highlighter: none
+highlighter: rouge
 
 # Contact info
 email: jared@jaredtulayan.xyz
