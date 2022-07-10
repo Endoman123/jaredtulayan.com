@@ -12,7 +12,7 @@ I am also working as a team member of the Rutgers Makerspace, where I help Rutge
 <br>
 
 ## Programming Languages
-I've learned a couple of langauges over the years.
+I've learned a couple of languages over the years.
 - Java
 - C#
 - C
