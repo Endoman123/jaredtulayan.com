@@ -35,16 +35,16 @@ sass:
 pagination:
   enabled: true
   debug: false
-  trail: 
-    before: 2
-    after: 2
+  collection: 'posts'
   per_page: 10
-  offset: 0
   permalink: '/:num/'
   title: ':title'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
+  trail: 
+    before: 2
+    after: 2
 
 # Default Front Matter
 defaults:
