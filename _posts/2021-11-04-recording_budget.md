@@ -1,5 +1,6 @@
 ---
 title: "Recording on a Budget"
+hidden: true
 tags: ["music"]
 ---
 This guide will serve to break down various considerations on audio recording for those that

@@ -108,8 +108,8 @@ DEPENDENCIES
   autoprefixer-rails
   jekyll (~> 4.1.1)
   jekyll-assets
-  jekyll-feed (~> 0.12)
-  jekyll-paginate-v2 (~> 3.0)
+  jekyll-feed
+  jekyll-paginate-v2
   minima (~> 2.5)
   sassc (~> 2.4)
   tzinfo (~> 1.2)

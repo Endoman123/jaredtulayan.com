@@ -21,7 +21,7 @@ collections:
     output: true
 
 # Build settings
-plugins:
+gems:
   - jekyll-paginate-v2
   - jekyll-feed
   - autoprefixer-rails
@@ -33,7 +33,7 @@ sass:
 # Pagination configuration
 pagination:
   enabled: true
-  debug: true
+  debug: false
   trail: 
     before: 2
     after: 2
