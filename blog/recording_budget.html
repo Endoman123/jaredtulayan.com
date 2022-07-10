@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!--Basic header defaults-->
+
+<!--Needed meta information-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<!--Style imports-->
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="https://kit.fontawesome.com/bd41fba6db.js" crossorigin="anonymous"></script>
+
+<!--
+  PrismJS. Probably shouldn't load this here.
+  Oh well.
+-->
+<script src="/assets/js/prism.js"></script>
+
+<!--Site Title-->
+<title>
+
+        Recording on a Budget :: Jared Tulayan
+
+</title>
+  </head>
+  <body class="min-vh-100 d-flex flex-column">
+    <nav class="p-0 position-relative navbar navbar-expand-lg fixed-top navbar-light">
+  <div class="container p-0 bg-dark">
+    <!--Navbar Brand-->
+    <a class="navbar-brand bg-primary link-unstyled px-2" href="/">Jared Tulayan</a>
+    
+    <!--Breadcrumbs-->
+    <p class="breadcrumbs my-auto pr-3 d-none d-md-inline flex-grow-2">
+      
+      
+        <span>>  
+        
+          <a href="/blog/" class="text-secondary">blog</a>
+        
+        </span>
+      
+        <span>>  
+        
+          recording_budget.html
+        
+        </span>
+      
+    </p>
+    
+    <!--Navbar Menu Toggle-->
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="navbar-toggler__open fas fa-bars"></i>
+    </button>
+
+    <!--Navbar Menu-->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        
+          <a class="nav-item nav-link" href="/about.html" >About</a>
+        
+          <a class="nav-item nav-link" href="/projects" >Projects</a>
+        
+          <a class="nav-item nav-link" href="/assets/documents/resume.pdf" target="_blank">Resume</a>
+        
+          <a class="nav-item nav-link" href="/blog" >Blog</a>
+          
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="header" class="container mt-10 mb-3">
+  <h1>Recording on a Budget</h1>
+  
+    <p class="text-muted"><i class="fas fa-clock"></i> 2021-11-04</p>
+  
+  
+    <p class="text-muted mt-auto">
+      
+      
+        #music
+      
+    </p> 
+  
+  
+  <hr class="separator-strong">
+</div>
+<main id="content" class="md container d-flex d-md-block flex-column flex-grow-1">
+    <p>This guide will serve to break down various considerations on audio recording for those that
+lack the resources, space, or time to create a proper audio recording setting. As the topic
+of recording as a whole is very large, the aim of this guide will be to set up an isolation
+booth for single-person recording. This will be good for most applications, such as vocals,
+simple instruments, and foley (SFX recordings).</p>
+      <h2 id="table-of-contents">
+        
+        
+          TABLE OF CONTENTS <a href="#table-of-contents" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h2>
+<ol>
+  <li><a href="#budget">BUDGET</a></li>
+  <li><a href="#hardware">HARDWARE</a></li>
+  <li><a href="#acoustics">ACOUSTICS</a></li>
+  <li><a href="#interference">INTERFERENCE</a></li>
+  <li><a href="#example">EXAMPLE</a></li>
+  <li><a href="#conclusion">CONCLUSION</a></li>
+</ol>
+    
+      <h2 id="budget">
+        
+        
+          BUDGET <a href="#budget" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h2>
+<p>One of the most important things to consider when designing anything is the budget you are willing to spend on it. 
+This does not just mean how much money you are willing to spend on this project, 
+but also <em>how much you want to spend on each aspect of it</em>. 
+A good breakdown of a budget is as follows:</p>
+
+<ul>
+  <li>Actual recording hardware (Interface, Mic)</li>
+  <li>Acoustic material (acoustic foam pads, reflectors, etc.)</li>
+  <li>DIY materials (hardware + tools you would use for mounting or building DIY acoustic solutions)</li>
+</ul>
+
+<p>Depending on what you already have on you, what your space is like, among many other things, will change how you break 
+down your budget between these three aspects. For this budget, a good start is 75-20-5. 
+The following sections will provide more explanation on how this breakdown was derived.</p>
+    
+      <h1 id="hardware">
+        
+        
+          HARDWARE <a href="#hardware" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h1>
+<p>You can’t polish a turd. As such, your audio recordings will only be as clear and high-resolution as the hardware you use to record that stuff. 
+However, that doesn’t necessarily mean that you need to spend millions of dollars to get decent sounding audio. 
+Many times it just requires doing good research on the hardware that you need to get so you get the best bang-for-buck.</p>
+
+<figure style="width: 20%" class="md-figure md-figure--left">
+    <img src="https://yourfreesounds.com/wp-content/uploads/2020/08/cardioid_pattern_graphics_wMic.png" style="height: 20%" class="md-figure__image" />
+    
+        <figcaption class="md-figure__caption">Cardiod Pickup Pattern <br /><i>source: yourfreesounds.com</i></figcaption>
+    
+</figure>
+
+<p>For this project, we only need an audio interface and a microphone. Most understand that a good microphone will pick up sound better, 
+but there are so many other considerations such as pickup patterns, diaphragm types, etc. For an iso booth, we will get a good XLR cardioid microphone. 
+XLR is just a 3-prong connector that most interfaces use, and cardioid describes the pickup pattern, 
+i.e.: where around the microphone will it pick up sound. A cardioid pattern picks up only around the front, and somewhat around the sides. This will be good to eliminate the cost for acoustic padding.</p>
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<figure style="width: 20%" class="md-figure md-figure--right">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.sweetwater.com%2Fimages%2Fitems%2F750%2FUM2usb-large.jpg" style="height: 50%" class="md-figure__image" />
+    
+        <figcaption class="md-figure__caption">Behringer UM2 Audio Interface <br /><i>source: Sweetwater</i></figcaption>
+    
+</figure>
+
+<p>Audio interfaces connect your audio devices to your computer. They also provide an audio-digital converter that is separate from your computer, which eliminates alot of electrical noise.
+Audio interfaces at a low price point are all about the same, so just aim for a reputable company that makes good audio equipment. 
+For instance, a Behringer UM2 is a good interface at just $30.</p>
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<p>Gear is far and plenty to come by, but consider these things when buying your recording hardware:</p>
+<ul>
+  <li>Buy used; there are many people out there reselling the gear you may be looking for for well under its original price.</li>
+  <li>Look at reviews; look more at the negative reviews and see if you see any common reviews about the hardware or the (re)seller. 
+Does it fail after a couple of months? Is the seller unreliable? Repeating reviews will tend to hold true.</li>
+  <li>Weigh your options; most gear will have pros and cons at any price point. It is up to you to decide what you can compromise on and what you can’t sway on.</li>
+</ul>
+    
+      <h2 id="acoustics">
+        
+        
+          ACOUSTICS <a href="#acoustics" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h2>
+<p>Listen to these two sounds and compare them.</p>
+<audio src="/assets/2021-11-04/test1.wav" controls="" preload=""></audio>
+<audio src="/assets/2021-11-04/test2.wav" controls="" preload=""></audio>
+
+<p><br /></p>
+
+<p>If you notice, one has a noticeable “flutter” or “shimmer” in the background when I clap.
+The other, less background noise in general.</p>
+
+<p>This effect is known as <strong>reverb</strong>, and it is the main enemy of an isolation room. 
+Reverb is the reflection of sound from the walls of the room. With recording, 
+especially loud noises and high gain, you may pick up the reverb from your sounds.
+To eliminate reverb, you effectively need to redirect reflections, diffuse them, or absorb the
+sound waves altogether.</p>
+
+<p>Before we look at what we need to do to fix our reverb, we need to take a couple of considerations.
+First you need to consider the room you are using; any furniture that is going to be in there will help 
+reduce the severity of the reverb. Even hard furniture such as dressers and shelves can redirect the 
+soundwaves in a way that your microphone won’t pick up. Second, you should consider the pickup pattern 
+that your microphone has. Since we have gone with a cardioid pickup pattern, <em>we can completely ignore 
+any reflections behind the microphone</em>, as it will not be picked up by the mic. 
+Instead, we can focus on the reflections happening in front of the microphone and to the sides of the microphone.</p>
+
+<p>With those considerations, we now need to think about how to rid of any relevant reflections in the room.
+With enough money, space, and freedom, we could just pad the entire surface area of the room. However, you most likely do not
+have that luxury. Instead, here are a couple of options that you can consider:</p>
+
+<ul>
+  <li>Fill your room with fabrics; most soft fabrics will dampen sound, so carpets, towels, etc. will all help
+reduce sound reflections. One particular item that is super effective and very accessible is drapery, especially
+large, pleated and layered curtains. These can diffuse sound very effectively.</li>
+  <li>Reposition your recording devices; If you can, move your recording and audio devices as far away from other sound
+sources or hard walls as you can. Positioning your audio things off-axis from walls (i.e.: not parallel) can also
+help reduce direct reflections.</li>
+  <li>Angle your furniture; something that you may not consider is how your furniture plays into reflections. Angling your
+furniture in a way that can send reflections to the sides or to the back of the recording area can help reduce reverbs
+that are picked up.</li>
+  <li>Build DIY acoustic panels; you can do this using leftover rockwool, sheep wool, or some other type of insulation.
+A good place to start is <a href="https://www.youtube.com/watch?v=dmHFbygUtO4">this video</a> by Kobi McCoull II. You
+can modify this idea to fit your needs, but generally the DIY route will require some research to make efficient acoustic panels.</li>
+</ul>
+    
+      <h2 id="interference">
+        
+        
+          INTERFERENCE <a href="#interference" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h2>
+<p>Any active sound source can act as interference: People, other speakers, etc. can all act as interference to the sound
+that is picked up. However, did you know that even electrical devices can act as interference? Microphones can actually
+pick up certain frequencies as low hum, depending on the size and distance of the electrical device. For instance, 
+most fluorescent light fixtures create a low 60hz hum that microphones will easily pick up. Similarly, even
+small components in computers and other circuits can create noises that your microphone or even your audio interface
+can pick up.</p>
+
+<p>This is why a standalone audio interface is a good buy for this project; your computer has an onboard interface, but since
+it is inside your computer, it can also take in the sounds brought by electrical interference.</p>
+
+<p>There are many other things you can do to minimize interference (at least the interference <em>you</em> can control):</p>
+<ul>
+  <li>Use low-traffic areas; places such as far closets and attic spaces make great recording rooms since not many people move around
+there. If you can manage to use a similar room for recording, it may be a good idea to do so.</li>
+  <li>Move electronic devices away from your recording equipment; this should minimize electrical interference. Even having solid walls
+between your devices and your electronic equipment can help.</li>
+  <li>Use LED lights instead of fluorescent fixtures; if you can simply get a floor lamp and use a LED lightbulb, that will eliminate
+hum that comes from flouorescent lights.</li>
+</ul>
+    
+      <h2 id="example">
+        
+        
+          EXAMPLE <a href="#example" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h2>
+<p>For a real-life example of what this information would look like applied, take my apartment room and gear for example.</p>
+
+<figure style="width: 25%" class="md-figure md-figure--right">
+    <img src="/assets/2021-11-04/room.jpg" style="height: 50%" class="md-figure__image" />
+    
+        <figcaption class="md-figure__caption">Corners of my room</figcaption>
+    
+</figure>
+
+<p>My recording hardware is a Marantz MPM-1000 cardiod microphone, paired with a Behringer UM2 audio interface.
+My apartment room is a small room, with a full-size bed and a band shirt on the wall. 
+It’s hardwood flooring, with some type of softwood walls, and other furniture and things that fill up the space.
+Here are some examples of both vocal and instrumental recordings in this room:</p>
+
+<audio src="/assets/2021-11-04/voice.mp3" controls="" preload=""></audio>
+<audio src="/assets/2021-11-04/inst.mp3" controls="" preload=""></audio>
+
+<p><br /></p>
+
+<p>Without much addition to my room, the quality of the recordings are already very nice. However, as you can tell there is still
+some reverb that gets through the mic, particularly where I clap and snap. There are many ways to solve this issue. Personally,
+I would consider putting some type of acoustic panel above my bed to dampen the reflections that come from there. My ceiling is hard
+to pad, but a way of doing it could be to hang something on some stands above my head.</p>
+
+<p>In terms of hardware, the cost is about $70, $30 for my audio interface and $40 for my microphone.
+In terms of dedicated acoustic paneling, the cost is another $20, which brings the total of this project to just under $100.</p>
+
+<p>Depending on your needs as well as where/how you source your hardware you may be able to spend less.</p>
+    
+      <h2 id="conclusion">
+        
+        
+          CONCLUSION <a href="#conclusion" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h2>
+
+<p>I hope that this guide provides some information on how to go about spending your money and setting up your room
+for recording audio. There are plenty of other sources online if you want more information on anything in specific
+that was covered in this guide. Be sure to also visit forums if you need other opinions on choices regarding audio
+considerations or recording hardware.</p>
+</main>
+<footer class="container my-7">
+  <ul class="list-unstyled text-muted">
+    <li class="h5">Contact Me:</li>
+    <li><a href="mailto:jared@jaredtulayan.xyz" target="_blank" class="text-muted"><i class="fas fa-envelope mr-2"></i>jared@jaredtulayan.xyz</a></li>
+    <li><i class="fas fa-phone-alt mr-2"></i>+1 (609) 361-4018</li>
+    
+    <li><a href="https://t.me/Endoman123" target="_blank" class="text-muted"><i class="fab fa-telegram-plane mr-2"></i>@Endoman123</a></li>
+    
+    <li id="social" class="mt-3">
+      
+      <a href="https://github.com/endoman123" target="_blank" class="text-muted"><i class="fab fa-github mr-2"></i></a>
+      
+      
+      <a href="https://instagram.com/jared.tulayan" target="_blank" class="text-muted"><i class="fab fa-instagram mr-2"></i></a>
+      
+    </li>
+  </ul>
+  <p class="text-muted">Jared Tulayan © 2020 :: Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-muted">Jekyll</a> :: <a href="https://github.com/Endoman123/jaredtulayan.xyz" target="_blank" class="text-muted">View Source</a></p>
+</footer>
+<!-- 
+  JS, Popper.js, and jQuery 
+  Required for Bootstrap
+-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </body>
+</html>

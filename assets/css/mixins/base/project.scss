@@ -1,0 +1,51 @@
+// Projects stylings
+.project {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $primary;
+
+    &__thumbnail {
+        position: relative;
+        flex-grow: 1;
+        padding: 0.5rem;
+
+        img {
+            display: block;
+            margin: auto;
+            max-height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            position: absolute;
+            margin: 0;
+            padding: 1rem;
+            background-color: $body-bg;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            transition: $transition-fade;
+        }
+    }
+
+    &__info {
+        padding: 0.25rem;
+        background-color: $primary;
+        text-align: center;
+
+        a {
+            color: $body-bg !important;
+        }
+    }
+}
+
+.project:hover {
+    .project__thumbnail {
+        p {
+            opacity: 100%;
+        }
+    }
+}

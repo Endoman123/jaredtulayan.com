@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-10T17:29:02+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Recording on a Budget</title><link href="/blog/recording_budget.html" rel="alternate" type="text/html" title="Recording on a Budget" /><published>2021-11-04T00:00:00+00:00</published><updated>2021-11-04T00:00:00+00:00</updated><id>/blog/recording_budget</id><content type="html" xml:base="/blog/recording_budget.html"><![CDATA[<p>This guide will serve to break down various considerations on audio recording for those that
+lack the resources, space, or time to create a proper audio recording setting. As the topic
+of recording as a whole is very large, the aim of this guide will be to set up an isolation
+booth for single-person recording. This will be good for most applications, such as vocals,
+simple instruments, and foley (SFX recordings).</p>
+
+<h2 id="table-of-contents">TABLE OF CONTENTS</h2>
+<ol>
+  <li><a href="#budget">BUDGET</a></li>
+  <li><a href="#hardware">HARDWARE</a></li>
+  <li><a href="#acoustics">ACOUSTICS</a></li>
+  <li><a href="#interference">INTERFERENCE</a></li>
+  <li><a href="#example">EXAMPLE</a></li>
+  <li><a href="#conclusion">CONCLUSION</a></li>
+</ol>
+
+<h2 id="budget">BUDGET</h2>
+<p>One of the most important things to consider when designing anything is the budget you are willing to spend on it. 
+This does not just mean how much money you are willing to spend on this project, 
+but also <em>how much you want to spend on each aspect of it</em>. 
+A good breakdown of a budget is as follows:</p>
+
+<ul>
+  <li>Actual recording hardware (Interface, Mic)</li>
+  <li>Acoustic material (acoustic foam pads, reflectors, etc.)</li>
+  <li>DIY materials (hardware + tools you would use for mounting or building DIY acoustic solutions)</li>
+</ul>
+
+<p>Depending on what you already have on you, what your space is like, among many other things, will change how you break 
+down your budget between these three aspects. For this budget, a good start is 75-20-5. 
+The following sections will provide more explanation on how this breakdown was derived.</p>
+
+<h1 id="hardware">HARDWARE</h1>
+<p>You can’t polish a turd. As such, your audio recordings will only be as clear and high-resolution as the hardware you use to record that stuff. 
+However, that doesn’t necessarily mean that you need to spend millions of dollars to get decent sounding audio. 
+Many times it just requires doing good research on the hardware that you need to get so you get the best bang-for-buck.</p>
+
+<figure style="width: 20%" class="md-figure md-figure--left">
+    <img src="https://yourfreesounds.com/wp-content/uploads/2020/08/cardioid_pattern_graphics_wMic.png" style="height: 20%" class="md-figure__image" />
+    
+        <figcaption class="md-figure__caption">Cardiod Pickup Pattern <br /><i>source: yourfreesounds.com</i></figcaption>
+    
+</figure>
+
+<p>For this project, we only need an audio interface and a microphone. Most understand that a good microphone will pick up sound better, 
+but there are so many other considerations such as pickup patterns, diaphragm types, etc. For an iso booth, we will get a good XLR cardioid microphone. 
+XLR is just a 3-prong connector that most interfaces use, and cardioid describes the pickup pattern, 
+i.e.: where around the microphone will it pick up sound. A cardioid pattern picks up only around the front, and somewhat around the sides. This will be good to eliminate the cost for acoustic padding.</p>
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<figure style="width: 20%" class="md-figure md-figure--right">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.sweetwater.com%2Fimages%2Fitems%2F750%2FUM2usb-large.jpg" style="height: 50%" class="md-figure__image" />
+    
+        <figcaption class="md-figure__caption">Behringer UM2 Audio Interface <br /><i>source: Sweetwater</i></figcaption>
+    
+</figure>
+
+<p>Audio interfaces connect your audio devices to your computer. They also provide an audio-digital converter that is separate from your computer, which eliminates alot of electrical noise.
+Audio interfaces at a low price point are all about the same, so just aim for a reputable company that makes good audio equipment. 
+For instance, a Behringer UM2 is a good interface at just $30.</p>
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<p>Gear is far and plenty to come by, but consider these things when buying your recording hardware:</p>
+<ul>
+  <li>Buy used; there are many people out there reselling the gear you may be looking for for well under its original price.</li>
+  <li>Look at reviews; look more at the negative reviews and see if you see any common reviews about the hardware or the (re)seller. 
+Does it fail after a couple of months? Is the seller unreliable? Repeating reviews will tend to hold true.</li>
+  <li>Weigh your options; most gear will have pros and cons at any price point. It is up to you to decide what you can compromise on and what you can’t sway on.</li>
+</ul>
+
+<h2 id="acoustics">ACOUSTICS</h2>
+<p>Listen to these two sounds and compare them.</p>
+<audio src="/assets/2021-11-04/test1.wav" controls="" preload=""></audio>
+<audio src="/assets/2021-11-04/test2.wav" controls="" preload=""></audio>
+
+<p><br /></p>
+
+<p>If you notice, one has a noticeable “flutter” or “shimmer” in the background when I clap.
+The other, less background noise in general.</p>
+
+<p>This effect is known as <strong>reverb</strong>, and it is the main enemy of an isolation room. 
+Reverb is the reflection of sound from the walls of the room. With recording, 
+especially loud noises and high gain, you may pick up the reverb from your sounds.
+To eliminate reverb, you effectively need to redirect reflections, diffuse them, or absorb the
+sound waves altogether.</p>
+
+<p>Before we look at what we need to do to fix our reverb, we need to take a couple of considerations.
+First you need to consider the room you are using; any furniture that is going to be in there will help 
+reduce the severity of the reverb. Even hard furniture such as dressers and shelves can redirect the 
+soundwaves in a way that your microphone won’t pick up. Second, you should consider the pickup pattern 
+that your microphone has. Since we have gone with a cardioid pickup pattern, <em>we can completely ignore 
+any reflections behind the microphone</em>, as it will not be picked up by the mic. 
+Instead, we can focus on the reflections happening in front of the microphone and to the sides of the microphone.</p>
+
+<p>With those considerations, we now need to think about how to rid of any relevant reflections in the room.
+With enough money, space, and freedom, we could just pad the entire surface area of the room. However, you most likely do not
+have that luxury. Instead, here are a couple of options that you can consider:</p>
+
+<ul>
+  <li>Fill your room with fabrics; most soft fabrics will dampen sound, so carpets, towels, etc. will all help
+reduce sound reflections. One particular item that is super effective and very accessible is drapery, especially
+large, pleated and layered curtains. These can diffuse sound very effectively.</li>
+  <li>Reposition your recording devices; If you can, move your recording and audio devices as far away from other sound
+sources or hard walls as you can. Positioning your audio things off-axis from walls (i.e.: not parallel) can also
+help reduce direct reflections.</li>
+  <li>Angle your furniture; something that you may not consider is how your furniture plays into reflections. Angling your
+furniture in a way that can send reflections to the sides or to the back of the recording area can help reduce reverbs
+that are picked up.</li>
+  <li>Build DIY acoustic panels; you can do this using leftover rockwool, sheep wool, or some other type of insulation.
+A good place to start is <a href="https://www.youtube.com/watch?v=dmHFbygUtO4">this video</a> by Kobi McCoull II. You
+can modify this idea to fit your needs, but generally the DIY route will require some research to make efficient acoustic panels.</li>
+</ul>
+
+<h2 id="interference">INTERFERENCE</h2>
+<p>Any active sound source can act as interference: People, other speakers, etc. can all act as interference to the sound
+that is picked up. However, did you know that even electrical devices can act as interference? Microphones can actually
+pick up certain frequencies as low hum, depending on the size and distance of the electrical device. For instance, 
+most fluorescent light fixtures create a low 60hz hum that microphones will easily pick up. Similarly, even
+small components in computers and other circuits can create noises that your microphone or even your audio interface
+can pick up.</p>
+
+<p>This is why a standalone audio interface is a good buy for this project; your computer has an onboard interface, but since
+it is inside your computer, it can also take in the sounds brought by electrical interference.</p>
+
+<p>There are many other things you can do to minimize interference (at least the interference <em>you</em> can control):</p>
+<ul>
+  <li>Use low-traffic areas; places such as far closets and attic spaces make great recording rooms since not many people move around
+there. If you can manage to use a similar room for recording, it may be a good idea to do so.</li>
+  <li>Move electronic devices away from your recording equipment; this should minimize electrical interference. Even having solid walls
+between your devices and your electronic equipment can help.</li>
+  <li>Use LED lights instead of fluorescent fixtures; if you can simply get a floor lamp and use a LED lightbulb, that will eliminate
+hum that comes from flouorescent lights.</li>
+</ul>
+
+<h2 id="example">EXAMPLE</h2>
+<p>For a real-life example of what this information would look like applied, take my apartment room and gear for example.</p>
+
+<figure style="width: 25%" class="md-figure md-figure--right">
+    <img src="/assets/2021-11-04/room.jpg" style="height: 50%" class="md-figure__image" />
+    
+        <figcaption class="md-figure__caption">Corners of my room</figcaption>
+    
+</figure>
+
+<p>My recording hardware is a Marantz MPM-1000 cardiod microphone, paired with a Behringer UM2 audio interface.
+My apartment room is a small room, with a full-size bed and a band shirt on the wall. 
+It’s hardwood flooring, with some type of softwood walls, and other furniture and things that fill up the space.
+Here are some examples of both vocal and instrumental recordings in this room:</p>
+
+<audio src="/assets/2021-11-04/voice.mp3" controls="" preload=""></audio>
+<audio src="/assets/2021-11-04/inst.mp3" controls="" preload=""></audio>
+
+<p><br /></p>
+
+<p>Without much addition to my room, the quality of the recordings are already very nice. However, as you can tell there is still
+some reverb that gets through the mic, particularly where I clap and snap. There are many ways to solve this issue. Personally,
+I would consider putting some type of acoustic panel above my bed to dampen the reflections that come from there. My ceiling is hard
+to pad, but a way of doing it could be to hang something on some stands above my head.</p>
+
+<p>In terms of hardware, the cost is about $70, $30 for my audio interface and $40 for my microphone.
+In terms of dedicated acoustic paneling, the cost is another $20, which brings the total of this project to just under $100.</p>
+
+<p>Depending on your needs as well as where/how you source your hardware you may be able to spend less.</p>
+
+<h2 id="conclusion">CONCLUSION</h2>
+
+<p>I hope that this guide provides some information on how to go about spending your money and setting up your room
+for recording audio. There are plenty of other sources online if you want more information on anything in specific
+that was covered in this guide. Be sure to also visit forums if you need other opinions on choices regarding audio
+considerations or recording hardware.</p>]]></content><author><name></name></author><category term="music" /><summary type="html"><![CDATA[This guide will serve to break down various considerations on audio recording for those that lack the resources, space, or time to create a proper audio recording setting. As the topic of recording as a whole is very large, the aim of this guide will be to set up an isolation booth for single-person recording. This will be good for most applications, such as vocals, simple instruments, and foley (SFX recordings).]]></summary></entry><entry><title type="html">Welcome</title><link href="/blog/welcome.html" rel="alternate" type="text/html" title="Welcome" /><published>2020-07-01T00:00:00+00:00</published><updated>2020-07-01T00:00:00+00:00</updated><id>/blog/welcome</id><content type="html" xml:base="/blog/welcome.html"><![CDATA[<p>Welcome to my new blog! This isn’t much of a post since the content of this is more for my own testing.
+However, I do want to address some things about this site in this post, just to kill two birds
+with one stone.</p>
+
+<p>First off, this site serves as not only my portfolio site for my projects (non-programming including), but
+serves as a place where I can get some thoughts out onto a space. For me, it just gives my head some freedom
+to rant/talk/teach/etc. Some fun things might come out of the fact that I have this freedom now:</p>
+
+<ul>
+  <li>Random lessons on fun programming things that I personally find fun/interesting</li>
+  <li>My own life doings, especially whatever I’m doing at the makerspace</li>
+  <li>Music</li>
+  <li>Opportunites</li>
+  <li>???</li>
+  <li>yea</li>
+</ul>
+
+<p>Second, I will host all the info about my relevant programming projects on this website. Keyword here is
+relevant–I definitely have more projects on my <a href="https://github.com/Endoman123">GitHub</a>, but I don’t feel
+like it helps any context of me being here; either they were passion projects that fell out of love, or the
+project was just something I posted more for testing. Either way, they aren’t things I feel like making a post
+for. There may come a time where a project I wasn’t working on becomes relevant, obviously, but until that happens,
+they probably won’t have a post.</p>
+
+<p>Third, code is definitely going to be in some of these posts. This is what it’s going to look like fenced off
+(this clip is from my project <a href="https://github.com/Endoman123/hold-my-coffee">Hold My Coffee</a>).</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Abstract class intended on creating actions that can be schedule with the boss.
+ * This allows for better control over what the boss does/can do during certain stages
+ * or events.
+ *
+ * @author Jared Tulayan
+ */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Action</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="n">parallel</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="cm">/**
+        * Runs the task.
+        *
+        * @param boss the {@code Entity} that this task is scheduled for
+        * @param deltaTime the amount of time passed since last frame
+        * @return whether or not the task is finished
+        */</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">act</span><span class="o">(</span><span class="nc">Entity</span> <span class="n">boss</span><span class="o">,</span> <span class="kt">float</span> <span class="n">deltaTime</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>I will try to be as cognisant as possible to tag posts with the relevant tags so that people know what they don’t want to read.</p>
+
+<p>That’s all for now, catch up soon.</p>]]></content><author><name></name></author><category term="personal" /><summary type="html"><![CDATA[Welcome to my new blog! This isn’t much of a post since the content of this is more for my own testing. However, I do want to address some things about this site in this post, just to kill two birds with one stone.]]></summary></entry></feed>

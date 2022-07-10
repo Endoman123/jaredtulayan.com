@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!--Basic header defaults-->
+
+<!--Needed meta information-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<!--Style imports-->
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="https://kit.fontawesome.com/bd41fba6db.js" crossorigin="anonymous"></script>
+
+<!--
+  PrismJS. Probably shouldn't load this here.
+  Oh well.
+-->
+<script src="/assets/js/prism.js"></script>
+
+<!--Site Title-->
+<title>
+
+        Welcome :: Jared Tulayan
+
+</title>
+  </head>
+  <body class="min-vh-100 d-flex flex-column">
+    <nav class="p-0 position-relative navbar navbar-expand-lg fixed-top navbar-light">
+  <div class="container p-0 bg-dark">
+    <!--Navbar Brand-->
+    <a class="navbar-brand bg-primary link-unstyled px-2" href="/">Jared Tulayan</a>
+    
+    <!--Breadcrumbs-->
+    <p class="breadcrumbs my-auto pr-3 d-none d-md-inline flex-grow-2">
+      
+      
+        <span>>  
+        
+          <a href="/blog/" class="text-secondary">blog</a>
+        
+        </span>
+      
+        <span>>  
+        
+          welcome.html
+        
+        </span>
+      
+    </p>
+    
+    <!--Navbar Menu Toggle-->
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="navbar-toggler__open fas fa-bars"></i>
+    </button>
+
+    <!--Navbar Menu-->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        
+          <a class="nav-item nav-link" href="/about.html" >About</a>
+        
+          <a class="nav-item nav-link" href="/projects" >Projects</a>
+        
+          <a class="nav-item nav-link" href="/assets/documents/resume.pdf" target="_blank">Resume</a>
+        
+          <a class="nav-item nav-link" href="/blog" >Blog</a>
+          
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="header" class="container mt-10 mb-3">
+  <h1>Welcome</h1>
+  
+    <p class="text-muted"><i class="fas fa-clock"></i> 2020-07-01</p>
+  
+  
+    <p class="text-muted mt-auto">
+      
+      
+        #personal
+      
+    </p> 
+  
+  
+  <hr class="separator-strong">
+</div>
+<main id="content" class="md container d-flex d-md-block flex-column flex-grow-1">
+    <p>Welcome to my new blog! This isn’t much of a post since the content of this is more for my own testing.
+However, I do want to address some things about this site in this post, just to kill two birds
+with one stone.</p>
+
+<p>First off, this site serves as not only my portfolio site for my projects (non-programming including), but
+serves as a place where I can get some thoughts out onto a space. For me, it just gives my head some freedom
+to rant/talk/teach/etc. Some fun things might come out of the fact that I have this freedom now:</p>
+
+<ul>
+  <li>Random lessons on fun programming things that I personally find fun/interesting</li>
+  <li>My own life doings, especially whatever I’m doing at the makerspace</li>
+  <li>Music</li>
+  <li>Opportunites</li>
+  <li>???</li>
+  <li>yea</li>
+</ul>
+
+<p>Second, I will host all the info about my relevant programming projects on this website. Keyword here is
+relevant–I definitely have more projects on my <a href="https://github.com/Endoman123">GitHub</a>, but I don’t feel
+like it helps any context of me being here; either they were passion projects that fell out of love, or the
+project was just something I posted more for testing. Either way, they aren’t things I feel like making a post
+for. There may come a time where a project I wasn’t working on becomes relevant, obviously, but until that happens,
+they probably won’t have a post.</p>
+
+<p>Third, code is definitely going to be in some of these posts. This is what it’s going to look like fenced off
+(this clip is from my project <a href="https://github.com/Endoman123/hold-my-coffee">Hold My Coffee</a>).</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Abstract class intended on creating actions that can be schedule with the boss.
+ * This allows for better control over what the boss does/can do during certain stages
+ * or events.
+ *
+ * @author Jared Tulayan
+ */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Action</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="n">parallel</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="cm">/**
+        * Runs the task.
+        *
+        * @param boss the {@code Entity} that this task is scheduled for
+        * @param deltaTime the amount of time passed since last frame
+        * @return whether or not the task is finished
+        */</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">act</span><span class="o">(</span><span class="nc">Entity</span> <span class="n">boss</span><span class="o">,</span> <span class="kt">float</span> <span class="n">deltaTime</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>I will try to be as cognisant as possible to tag posts with the relevant tags so that people know what they don’t want to read.</p>
+
+<p>That’s all for now, catch up soon.</p>
+</main>
+<footer class="container my-7">
+  <ul class="list-unstyled text-muted">
+    <li class="h5">Contact Me:</li>
+    <li><a href="mailto:jared@jaredtulayan.xyz" target="_blank" class="text-muted"><i class="fas fa-envelope mr-2"></i>jared@jaredtulayan.xyz</a></li>
+    <li><i class="fas fa-phone-alt mr-2"></i>+1 (609) 361-4018</li>
+    
+    <li><a href="https://t.me/Endoman123" target="_blank" class="text-muted"><i class="fab fa-telegram-plane mr-2"></i>@Endoman123</a></li>
+    
+    <li id="social" class="mt-3">
+      
+      <a href="https://github.com/endoman123" target="_blank" class="text-muted"><i class="fab fa-github mr-2"></i></a>
+      
+      
+      <a href="https://instagram.com/jared.tulayan" target="_blank" class="text-muted"><i class="fab fa-instagram mr-2"></i></a>
+      
+    </li>
+  </ul>
+  <p class="text-muted">Jared Tulayan © 2020 :: Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-muted">Jekyll</a> :: <a href="https://github.com/Endoman123/jaredtulayan.xyz" target="_blank" class="text-muted">View Source</a></p>
+</footer>
+<!-- 
+  JS, Popper.js, and jQuery 
+  Required for Bootstrap
+-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </body>
+</html>

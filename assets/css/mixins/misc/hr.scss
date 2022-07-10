@@ -1,0 +1,17 @@
+// Separator themes
+// For use with <hr>
+hr {
+    border-top: 1px solid;
+    height: 0px;
+}
+
+hr.separator-strong {
+    border-top: 3px dotted;
+    border-bottom: 3px dotted;
+    height: 3px;
+}
+
+hr.separator-weak {
+    border-top: 1px dotted;
+    height: 0px;
+}
