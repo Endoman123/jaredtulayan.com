@@ -1,0 +1,9 @@
+// Defaults for everything
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+
+$font-body: 'Courier Prime', monospace;
+$font-head: 'VT323', serif;
+
+p, li {
+    font-family: $font-body
+}
