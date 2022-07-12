@@ -1,0 +1,9 @@
+// Control Default
+$control-border-size: 3px;
+$control-border-color: #000;
+$control-shadow-color: #555;
+
+@mixin control {
+    border: $control-border-size solid $control-border-color;
+    box-shadow: 4px 4px $control-shadow-color;
+}

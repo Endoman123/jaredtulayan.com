@@ -1,0 +1,15 @@
+@use 'control' as *;
+
+// Button Default
+.button {
+    @include control;
+
+    padding: 0.2rem;
+    margin: 0.5rem;
+    background: white;
+    text-decoration: none;
+
+    &:hover, :active {
+        background: black;
+    }
+}
