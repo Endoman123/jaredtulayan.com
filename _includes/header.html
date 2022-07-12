@@ -1,25 +1,25 @@
-<!--Basic header defaults-->
-
-<!--Needed meta information-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-
-<!--Style imports-->
-<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-<script src="https://kit.fontawesome.com/bd41fba6db.js" crossorigin="anonymous"></script>
-
-<!--
-  PrismJS. Probably shouldn't load this here.
-  Oh well.
--->
-<script src="{{ "assets/js/prism.js" | relative_url }}"></script>
-
-<!--Site Title-->
-<title>
-{% case page.layout | downcase %}
-    {% when "home" %}
-        {{ site.title }}
-    {% else %}
-        {{ page.title }} :: {{ site.title }}
-{% endcase %}
-</title>
+<header class="header">
+    <!--Navbar Brand-->
+    <a class="navbar-brand bg-primary link-unstyled px-2" href="/">Jared Tulayan</a>
+    
+    <!--Breadcrumbs-->
+    <p class="breadcrumbs my-auto pr-3 d-none d-md-inline flex-grow-2">
+      {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+      {% for crumb in crumbs offset: 1 %}
+        <span>>  
+        {% if forloop.last %}
+          {{ crumb | downcase }}
+        {% else %}
+          <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}" class="text-secondary">{{ crumb | downcase }}</a>
+        {% endif %}
+        </span>
+      {% endfor %}
+    </p>
+    
+    <!--Navbar Menu-->
+    <nav class="navbar">
+      {% for item in site.data.navbar %}
+        <a class="button" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
+      {% endfor %}  
+    </nav>
+</header>
