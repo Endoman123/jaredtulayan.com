@@ -1,0 +1,9 @@
+// Main formatting
+// This is done through hierarchy, not through BEM
+@use "../base/utils" as *;
+
+.main {
+    p, ol, ul {
+        @include p-spacing;
+    }
+}
