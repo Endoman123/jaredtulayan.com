@@ -1,0 +1,10 @@
+// Generic card block
+@use "sass:color";
+@use "control" as *;
+@use "colors" as *;
+
+.card {
+    @include control;
+
+    background: color.change($color-bg, $alpha: $color-bg-intensity);
+}

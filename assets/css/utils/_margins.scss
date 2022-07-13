@@ -1,0 +1,37 @@
+// Margins utils
+@use "sass:map";
+@use "spacing" as *;
+
+@each $i, $s in $spacing {
+    .m-l-#{$i} {
+        margin-left: $s;
+    }
+
+    .m-r-#{$i} {
+        margin-right: $s;
+    }
+
+    .m-t-#{$i} {
+        margin-top: $s;
+    }
+
+    .m-b-#{$i} {
+        margin-bottom: $s;
+    }
+}
+
+.m-l-auto {
+    margin-left: auto;
+}
+
+.m-r-auto {
+    margin-right: auto;
+}
+
+.m-t-auto {
+    margin-top: auto;
+}
+
+.m-b-auto {
+    margin-bottom: auto;
+}

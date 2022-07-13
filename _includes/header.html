@@ -1,9 +1,9 @@
-<header class="header">
+<header class="flexbox flexbox--row flexbox--cg--5 flexbox--a--center">
     <!--Navbar Brand-->
     <a class="navbar-brand bg-primary link-unstyled px-2" href="/">Jared Tulayan</a>
     
     <!--Breadcrumbs-->
-    <p class="breadcrumbs my-auto pr-3 d-none d-md-inline flex-grow-2">
+    <p class="m-t-auto m-b-auto p-r-3">
       {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
       {% for crumb in crumbs offset: 1 %}
         <span>>  
@@ -17,7 +17,7 @@
     </p>
     
     <!--Navbar Menu-->
-    <nav class="navbar">
+    <nav class="flexbox flexbox--row flexbox--cg--3 m-l-auto">
       {% for item in site.data.navbar %}
         <a class="button" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
       {% endfor %}  

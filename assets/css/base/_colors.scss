@@ -1,37 +1,55 @@
 // Colors Default
 @use "sass:map";
+@use "sass:color";
 
-$color-gradient-1: #beebee;
-$color-gradient-2: #caacaa;
-$color-bg-intensity: 0.375;
 
 $colors: (
-    "foreground": #000,
-    "background": #fff,
-    "shadow": #0000005f,
-    "link": #555,
-    "link-hover": #aaa,
-    "link-active": #777
+    "black": #000,
+    "white": #fff,
+    "red": #caacaa,
+    "orange": #ffcfc1,
+    "yellow": #caacaa,
+    "green": #beebee,
+    "blue": #509dbe,
+    "purple": #beebee,
 );
 
-// HTML
+$neutral-shades: (
+    "0": #000,
+    "100": #fff,
+);
+
+$color-fg: map.get($colors, "black");
+$color-bg: map.get($colors, "white");
+$color-primary: map.get($colors, "blue");
+$color-link: color.scale($color-primary, $lightness: -50%);
+$color-link-hover: color.scale($color-link, $lightness: 25%);
+$color-link-active: color.scale($color-link, $lightness: 40%);
+
+$color-gradient-1: map.get($colors, "orange");
+$color-gradient-2: map.get($colors, "blue");
+$color-bg-intensity: 0.375;
+
+$color-shadow: color.change(map.get($colors, "black"), $alpha: 0.25);
+
+// Overall BG
 html {
     background: linear-gradient(15deg, $color-gradient-1, $color-gradient-2);
 }
 
 // Anchors
 p, li {
-    color: map.get($colors, "foreground");
+    color: $color-fg;
 }
 
 a {
-    color: map.get($colors, "link");
+    color: $color-link;
 
     &:hover {
-        color: map.get($colors, "link-hover");
+        color: $color-link-hover;
     }
 
     &:active {
-        color: map.get($colors, "link-active");
+        color: $color-link-active;
     }
 }

@@ -1,6 +1,4 @@
 // Markdown Figure block
-@use "sass:map";
-
 @use 'utils' as *;
 @use 'control' as *;
 @use 'colors' as *;
@@ -16,7 +14,7 @@
     &__caption {
         padding: 0.25rem 0;
         text-align: center;
-        color: map.get($colors, "background");
-        background: map.get($colors, "foreground");
+        color: $color-bg;
+        background: $color-fg;
     }
 }

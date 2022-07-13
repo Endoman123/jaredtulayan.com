@@ -5,20 +5,16 @@
 
 @font-face {
     font-family: 'Cozette', monospace;
-    src: url("assets/fonts/CozetteVector.ttf") format("truetype");
+    src: url("../fonts/CozetteVector.ttf") format("truetype");
 }
 
 $font-body: 'Courier Prime', monospace;
 $font-head: 'VT323', serif;
+$font-monospace: 'Cozette', monospace;
 
 // Default font
 html {
     font-family: $font-body;
-}
-
-// Anchors
-a {
-    text-decoration: none;
 }
 
 // Header

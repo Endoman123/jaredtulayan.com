@@ -1,0 +1,13 @@
+// Spacing defaults
+@use "sass:map";
+
+$spacing: (
+    "0": 0rem,
+    "1": 0.1rem,
+    "2": 0.25rem,
+    "3": 0.5rem,
+    "4": 0.8rem,
+    "5": 1rem
+);
+
+$spacing-p-button: map.get($spacing, "2");

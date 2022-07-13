@@ -5,14 +5,10 @@
 @use "colors" as *;
 
 .body {
-    display: flex;
-    flex-flow: column nowrap;
     min-height: 100vh;
     max-width: 50rem;
-    padding: 1rem;
-    margin: 0 auto;
 
     &--filled {
-        background: color.change(map.get($colors, "background"), $alpha: $color-bg-intensity);
+        background: color.change($color-bg, $alpha: $color-bg-intensity);
     }
 }

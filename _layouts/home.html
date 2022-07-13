@@ -4,20 +4,14 @@
 
 layout: base
 ---
-<body class="body">
-  <div class="container d-flex justify-content-center m-auto">
-    <div class="col-lg-6 col-md-8 col-xs-12">
-      <ul class="list-unstyled text-light">
-          <li class="bg-light text-dark">
-              <h1 class="h4">Jared Tulayan</h1>
-          </li>
-          {% for item in site.data.navbar %}
-          <li>    
-              <span class="mr-1">></span>
-              <a class="link-unstyled" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
-          </li>
-          {% endfor %} 
-      </ul>
-    </div>
+<body class="body flexbox flexbox--col p-l-5 p-r-5 m-l-auto m-r-auto">
+  <div class="card flexbox flexbox--col p-t-5 p-b-5 p-l-5 p-r-5 m-t-auto m-b-auto m-l-auto m-r-auto">
+    <h1 class="text-center">Jared Tulayan</h1>
+    <p class="text-center">Programmer, Maker, Musician</p>
+    <nav class="flexbox flexbox--row flexbox--cg--3 p-t-3 m-l-auto m-r-auto">
+      {% for item in site.data.navbar %}
+        <a class="button button--flat" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
+      {% endfor %}  
+    </nav>
   </div>
 </body>
