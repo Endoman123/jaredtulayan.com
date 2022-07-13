@@ -1,19 +1,17 @@
-<footer class="flexbox flexbox--col flexbox--cg--1 m-t-auto">
+<footer class="flexbox flexbox--col flexbox--cg--1 mt-auto">
   <h5>Contact Me:</h5>
-  <ul class="list-unstyled text-muted">
-      <li><a href="mailto:{{ site.email }}" target="_blank" class="text-muted"><i class="fas fa-envelope m-r-2"></i>{{ site.email }}</a></li>
-    <li><i class="fas fa-phone-alt m-r-2"></i>{{ site.phone }}</li>
+    <a href="mailto:{{ site.email }}" target="_blank" class="text-muted"><i class="fas fa-envelope mr-1"></i>{{ site.email }}</a></li>
+    <span><i class="fas fa-phone-alt mr-1"></i>{{ site.phone }}</li></span>
     {% if site.telegram %}
-    <li><a href="https://t.me/{{ site.telegram }}" target="_blank" class="text-muted"><i class="fab fa-telegram-plane m-r-2"></i>{{ site.telegram | prepend: '@' }}</a></li>
+    <a href="https://t.me/{{ site.telegram }}" target="_blank" class="text-muted"><i class="fab fa-telegram-plane mr-1"></i>{{ site.telegram | prepend: '@' }}</a>
     {% endif %}
-    <li id="social" class="m-t-3">
+    <span class="mt-2">
       {% if site.github %}
-      <a href="https://github.com/{{ site.github }}" target="_blank" class="text-muted"><i class="fab fa-github m-r-2"></i></a>
+      <a href="https://github.com/{{ site.github }}" target="_blank" class="text-muted"><i class="fab fa-github mr-1"></i></a>
       {% endif %}
       {% if site.instagram %}
-      <a href="https://instagram.com/{{ site.instagram }}" target="_blank"><i class="fab fa-instagram m-r-2"></i></a>
+      <a href="https://instagram.com/{{ site.instagram }}" target="_blank"><i class="fab fa-instagram mr-1"></i></a>
       {% endif %}
-    </li>
-  </ul>
-  <p class="text-muted m-t-3">Jared Tulayan © 2020 :: Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-muted">Jekyll</a> :: <a href="{{ site.repo }}" target="_blank">View Source</a></p>
+    </span>
+  <p class="text-muted mt-2">Jared Tulayan © 2020 :: Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-muted">Jekyll</a> :: <a href="{{ site.repo }}" target="_blank">View Source</a></p>
 </footer>

@@ -3,35 +3,63 @@
 @use "spacing" as *;
 
 @each $i, $s in $spacing {
-    .m-l-#{$i} {
+    .ml-#{$i} {
         margin-left: $s;
     }
 
-    .m-r-#{$i} {
+    .mr-#{$i} {
         margin-right: $s;
     }
 
-    .m-t-#{$i} {
+    .mt-#{$i} {
         margin-top: $s;
     }
 
-    .m-b-#{$i} {
+    .mb-#{$i} {
         margin-bottom: $s;
+    }
+
+    .mx-#{$i} {
+        margin-left: $s;
+        margin-right: $s;
+    }
+
+    .my-#{$i} {
+        margin-top: $s;
+        margin-bottom: $s;
+    }
+
+    .m-#{$i} {
+        margin: $s;
     }
 }
 
-.m-l-auto {
+.ml-auto {
     margin-left: auto;
 }
 
-.m-r-auto {
+.mr-auto {
     margin-right: auto;
 }
 
-.m-t-auto {
+.mt-auto {
     margin-top: auto;
 }
 
-.m-b-auto {
+.mb-auto {
     margin-bottom: auto;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.m-auto {
+    margin: auto;
 }

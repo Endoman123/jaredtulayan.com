@@ -14,9 +14,16 @@ $colors: (
     "purple": #beebee,
 );
 
-$neutral-shades: (
-    "0": #000,
-    "100": #fff,
+$opacity: (
+    "0": 0,
+    "1": .15,
+    "2": .25,
+    "3": .375,
+    "4": .50,
+    "5": .60,
+    "6": .75,
+    "7": .90,
+    "8": 1,
 );
 
 $color-fg: map.get($colors, "black");
@@ -28,9 +35,8 @@ $color-link-active: color.scale($color-link, $lightness: 40%);
 
 $color-gradient-1: map.get($colors, "orange");
 $color-gradient-2: map.get($colors, "blue");
-$color-bg-intensity: 0.375;
 
-$color-shadow: color.change(map.get($colors, "black"), $alpha: 0.25);
+$color-shadow: color.change(map.get($colors, "black"), $alpha: map.get($opacity, "2"));
 
 // Overall BG
 html {

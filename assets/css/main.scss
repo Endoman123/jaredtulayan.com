@@ -5,8 +5,7 @@
 @use 'base/fonts';
 @use 'base/colors';
 
-@use 'common/body';
-@use 'common/main';
+@use 'common/content';
 @use 'common/flexbox';
 @use 'common/button';
 @use 'common/card';
@@ -16,4 +15,5 @@
 
 @use 'utils/margins';
 @use 'utils/padding';
+@use 'utils/flex';
 @use 'utils/text';
