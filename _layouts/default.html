@@ -5,26 +5,28 @@
 
 layout: base
 ---
-{% include navbar.html %}
-<div id="header" class="container mt-10 mb-3">
-  <h1>{{ page.title }}</h1>
-  {% if page.collection != "projects" and page.date %}
-    <p class="text-muted"><i class="fas fa-clock"></i> {{ page.date | date: '%Y-%m-%d' }}</p>
-  {% endif %}
-  {% if page.tags.size > 0 %}
-    <p class="text-muted mt-auto">
-      {% assign tags = page.tags | sort %}
-      {% for tag in tags %}
-        #{{tag}}
-      {% endfor %}
-    </p> 
-  {% endif %}
-  {% if page.description %}
-  <p class="lead">{{ page.description }}</p>
-  {% endif %}
-  <hr class="separator-strong">
-</div>
-<main id="content" class="{{ page.layout }} container d-flex d-md-block flex-column flex-grow-1">
-    {{ content }}
-</main>
-{% include footer.html %}
+<body class="body body--filled">
+  {% include header.html %}
+  <div id="title" class="container mt-10 mb-3">
+    <h1>{{ page.title }}</h1>
+    {% if page.collection != "projects" and page.date %}
+      <p class="text-muted"><i class="fas fa-calendar-day"></i> {{ page.date | date: '%Y-%m-%d' }}</p>
+    {% endif %}
+    {% if page.tags.size > 0 %}
+      <p class="text-muted mt-auto">
+        {% assign tags = page.tags | sort %}
+        {% for tag in tags %}
+          #{{tag}}
+        {% endfor %}
+      </p> 
+    {% endif %}
+    {% if page.description %}
+    <p class="lead">{{ page.description }}</p>
+    {% endif %}
+    <hr class="separator-strong">
+  </div>
+  <main id="content" class="main">
+      {{ content }}
+  </main>
+  {% include footer.html %}
+</body>

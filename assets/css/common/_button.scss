@@ -1,15 +1,17 @@
+@use 'sass:map';
+
 @use 'control' as *;
+@use 'colors' as *;
 
 // Button Default
 .button {
     @include control;
 
     padding: 0.2rem;
-    margin: 0.5rem;
-    background: white;
+    background: map.get($colors, "background");
     text-decoration: none;
 
     &:hover, :active {
-        background: black;
+        background: map.get($colors, "foreground");
     }
 }

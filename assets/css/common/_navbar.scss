@@ -1,0 +1,12 @@
+// Navbar block
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 0.5rem;
+    margin-left: auto;
+
+    > &__button {
+
+    }
+}

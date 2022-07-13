@@ -1,6 +1,6 @@
 // Main formatting
 // This is done through hierarchy, not through BEM
-@use "../base/utils" as *;
+@use "utils" as *;
 
 .main {
     p, ol, ul {

@@ -1,0 +1,10 @@
+// Control Default
+@use "sass:map";
+@use 'colors' as *;
+
+$control-border-size: 3px;
+
+@mixin control {
+    border: $control-border-size solid map.get($colors, "foreground");
+    box-shadow: 4px 4px map.get($colors, "shadow");
+}

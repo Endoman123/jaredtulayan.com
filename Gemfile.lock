@@ -5,6 +5,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
+    bundler-graph (0.2.1)
     colorator (1.1.0)
     concurrent-ruby (1.1.10)
     em-websocket (0.5.3)
@@ -16,9 +17,10 @@ GEM
       addressable (~> 2.3, >= 2.3.5)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
+    google-protobuf (3.21.2-x86_64-linux)
     hike (1.2.3)
     http_parser.rb (0.8.0)
-    i18n (1.10.0)
+    i18n (1.11.0)
       concurrent-ruby (~> 1.0)
     jekyll (4.1.1)
       addressable (~> 2.4)
@@ -72,14 +74,20 @@ GEM
       forwardable-extended (~> 2.6)
     public_suffix (4.0.7)
     rack (1.6.13)
+    rake (13.0.6)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.29.0)
+    ruby-graphviz (1.2.5)
+      rexml
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
+    sass-embedded (1.53.0)
+      google-protobuf (~> 3.19)
+      rake (>= 10.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -106,12 +114,14 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bundler-graph
   jekyll (~> 4.1.1)
   jekyll-assets
   jekyll-feed
   jekyll-paginate-v2
   minima (~> 2.5)
-  sassc
+  ruby-graphviz
+  sass-embedded
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

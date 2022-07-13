@@ -1,9 +1,9 @@
 // Markdown Figure block
 @use "sass:map";
 
-@use '../common/control' as *;
-@use '../base/utils' as *;
-@use '../base/colors' as *;
+@use 'utils' as *;
+@use 'control' as *;
+@use 'colors' as *;
 
 .md-figure {
     @include control;

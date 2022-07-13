@@ -1,9 +1,34 @@
 // Defaults for everything
+@use 'utils' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+
+@font-face {
+    font-family: 'Cozette', monospace;
+    src: url("assets/fonts/CozetteVector.ttf") format("truetype");
+}
 
 $font-body: 'Courier Prime', monospace;
 $font-head: 'VT323', serif;
 
-p, li {
-    font-family: $font-body
+// Default font
+html {
+    font-family: $font-body;
+}
+
+// Anchors
+a {
+    text-decoration: none;
+}
+
+// Header
+h1, h2, h3 {
+    font-family: $font-head;
+    font-size: 2.5rem;
+}
+
+h4, h5, h6 {
+    font-family: $font-body;
+    font-weight: bold;
+    font-size: 1.5rem;
 }

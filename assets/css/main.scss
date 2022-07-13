@@ -1,9 +1,15 @@
 ---
 # Main CSS file
 ---
-
 @use 'base/reset';
 @use 'base/text';
+@use 'base/colors';
 
 @use 'common/body';
 @use 'common/main';
+@use 'common/header';
+@use 'common/navbar';
+@use 'common/button';
+
+@use 'md/base';
+@use 'md/figure';

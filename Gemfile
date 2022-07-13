@@ -22,7 +22,6 @@ group :jekyll_plugins do
   gem "jekyll-assets"
   gem "autoprefixer-rails"
   gem "webrick"
-  gem "sassc"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -34,3 +33,10 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# Sass implementation
+gem "sass-embedded"
+
+# Debug purposes
+gem "ruby-graphviz"
+gem "bundler-graph"

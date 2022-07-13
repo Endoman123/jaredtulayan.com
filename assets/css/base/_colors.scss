@@ -1,0 +1,37 @@
+// Colors Default
+@use "sass:map";
+
+$color-gradient-1: #beebee;
+$color-gradient-2: #caacaa;
+$color-bg-intensity: 0.375;
+
+$colors: (
+    "foreground": #000,
+    "background": #fff,
+    "shadow": #0000005f,
+    "link": #555,
+    "link-hover": #aaa,
+    "link-active": #777
+);
+
+// HTML
+html {
+    background: linear-gradient(15deg, $color-gradient-1, $color-gradient-2);
+}
+
+// Anchors
+p, li {
+    color: map.get($colors, "foreground");
+}
+
+a {
+    color: map.get($colors, "link");
+
+    &:hover {
+        color: map.get($colors, "link-hover");
+    }
+
+    &:active {
+        color: map.get($colors, "link-active");
+    }
+}
