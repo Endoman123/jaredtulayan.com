@@ -6,4 +6,14 @@
 
 .card {
     @include control;
+
+    background: $color-bg;
+
+    &__content {
+        border-top: $control-border-size solid $color-fg;
+
+        &--borderless {
+            border-top: none;
+        }
+    }
 }

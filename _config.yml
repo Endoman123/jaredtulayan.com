@@ -9,13 +9,6 @@ repo: "https://github.com/Endoman123/jaredtulayan.xyz" # Source link
 permalink: /blog/:title:output_ext
 highlighter: rouge
 
-# Contact info
-email: jared@jaredtulayan.xyz
-phone: +1 (609) 361-4018
-telegram: Endoman123
-github:  endoman123
-instagram:  jared.tulayan
-
 # Custom collections
 collections:
   projects:
@@ -88,7 +81,6 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - README.md
-  - assets/*.ignore
     
 # Include scss for things
 # include:

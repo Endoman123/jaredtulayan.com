@@ -4,17 +4,22 @@
 
 layout: base
 ---
-<div class="card flexbox flexbox--col p-3 m-auto">
-  <h1 class="text-center">Jared Tulayan</h1>
-  <p class="text-center">Programmer, Maker, Musician</p>
-  <nav class="flexbox flexbox--row flexbox--cg--3 mt-3 mx-auto ">
-    {% for item in site.data.navbar %}
-      <a class="button button--flat" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
-    {% endfor %}  
-  </nav>
-  <div class="flexbox flexbox--row mt-3">
-    {% for contact in site.data.contacts %}
-      <a href="{{ contact.url }}" target="_blank" class="mx-auto text-size-2"><i class="{{ contact.fa-class }}"></i></a>
-    {% endfor %}
+<body class="content flexbox flexbox--col p-4 mx-auto">
+  <div class="card flexbox flexbox--col m-auto">
+    <image src="/assets/images/portrait.jpg"/>
+    <div class="card__content flexbox flexbox--col p-3">
+      <h1 class="text-center">Jared Tulayan</h1>
+      <p class="text-center">Programmer, Maker, Musician</p>
+      <nav class="flexbox flexbox--row flexbox--cg--3 mt-3 mx-auto ">
+        {% for item in site.data.navbar %}
+          <a class="button button--flat" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
+        {% endfor %}  
+      </nav>
+      <div class="flexbox flexbox--row mt-3">
+        {% for contact in site.data.contacts %}
+          <a href="{{ contact.url }}" target="_blank" class="mx-auto text-size-2"><i class="{{ contact.fa-class }}"></i></a>
+        {% endfor %}
+      </div>
+    </div>
   </div>
-</div>
+</body>

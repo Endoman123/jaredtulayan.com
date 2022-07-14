@@ -4,14 +4,14 @@
 
 
 $colors: (
-    "black": #000,
-    "white": #fff,
-    "red": #caacaa,
-    "orange": #ffcfc1,
-    "yellow": #caacaa,
-    "green": #beebee,
-    "blue": #509dbe,
-    "purple": #beebee,
+    "black": #0E0F19,
+    "white": #F2F7F2,
+    "red": #92140C,
+    "orange": #FF430A,
+    "yellow": #FFC914,
+    "green": #6FAF5A,
+    "blue": #4C9BBD,
+    "purple": #77678E,
 );
 
 $opacity: (
@@ -40,7 +40,9 @@ $color-shadow: color.change(map.get($colors, "black"), $alpha: map.get($opacity,
 
 // Overall BG
 html {
-    background: linear-gradient(15deg, $color-gradient-1, $color-gradient-2);
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    // background: linear-gradient(15deg, color.scale($color-gradient-1, $lightness: 25%), color.scale($color-gradient-2, $lightness: 25%));
 }
 
 // Anchors
