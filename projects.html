@@ -2,20 +2,15 @@
 permalink: /projects/
 title: My Projects
 ---
-<div id="projects-feed" class="row">
+<div id="projects-feed" class="flexbox flexbox--row">
   {% for item in site.projects %}
-  <div class="col-lg-4 col-sm-6 col-xs-12 px-1 pb-2">
-    <figure class="project h-100">
-      <div class="project__thumbnail">
+  <div class="card mx-1 mb-2" style="width: 30%">
         {% if item.thumbnail %}
-          <img src="{{ item.thumbnail }}" />
+          <img src="{{ item.thumbnail }}" style="width: 100%"/>
         {% endif %}
-        <p>{{ item.description }}</p>
-      </div>
-      <figcaption class="project__info">
+      <div class="card__content">
         <a class="stretched-link link-unstyled" href="{{ item.url }}">{{ item.title }}</a>
-      </figcaption>
-    </figure>
+      </div>
   </div>
   {% endfor %}
 </div>
