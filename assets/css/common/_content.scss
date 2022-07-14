@@ -9,7 +9,7 @@
     max-width: 50rem;
     
     &--filled {
-        background: $color-bg;
+        background: color.change($color-bg, $alpha: map.get($opacity, "3"));
         backdrop-filter: blur(10px);
     }
 }

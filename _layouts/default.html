@@ -5,12 +5,12 @@
 
 layout: base
 ---
-<body class="card content flexbox flexbox--col p-4 mx-auto">
+<body class="content content--filled flexbox flexbox--col p-4 mx-auto">
 {% include header.html %}
 <div class="flexbox flexbox--col mt-2 mb-3">
-  <h1>{{ page.title }}</h1>
+  <h1 class="mb-2">{{ page.title }}</h1>
   {% if page.collection != "projects" and page.date %}
-    <p class="text-muted"><i class="fas fa-calendar-day"></i> {{ page.date | date: '%Y-%m-%d' }}</p>
+    <p class="mb-2"><i class="fas fa-calendar-day"></i> {{ page.date | date: '%Y-%m-%d' }}</p>
   {% endif %}
   {% if page.tags.size > 0 %}
     <p class="text-muted mt-auto">
