@@ -10,4 +10,14 @@
             margin-bottom: map.get($spacing, "3");
         }
     }
+
+    ol {
+        margin-left: map.get($spacing, "4");
+        list-style-type: decimal;
+    }
+
+    ul {
+        margin-left: map.get($spacing, "4");
+        list-style-type: square;
+    }
 }
