@@ -12,4 +12,9 @@ layout: base
       <a class="button button--flat" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
     {% endfor %}  
   </nav>
+  <div class="flexbox flexbox--row mt-3">
+    {% for contact in site.data.contacts %}
+      <a href="{{ contact.url }}" target="_blank" class="mx-auto text-size-2"><i class="{{ contact.fa-class }}"></i></a>
+    {% endfor %}
+  </div>
 </div>

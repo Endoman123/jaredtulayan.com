@@ -1,17 +1,7 @@
 <footer class="flexbox flexbox--col flexbox--cg--1 mt-auto">
   <h5>Contact Me:</h5>
-    <a href="mailto:{{ site.email }}" target="_blank" class="text-muted"><i class="fas fa-envelope mr-1"></i>{{ site.email }}</a></li>
-    <span><i class="fas fa-phone-alt mr-1"></i>{{ site.phone }}</li></span>
-    {% if site.telegram %}
-    <a href="https://t.me/{{ site.telegram }}" target="_blank" class="text-muted"><i class="fab fa-telegram-plane mr-1"></i>{{ site.telegram | prepend: '@' }}</a>
-    {% endif %}
-    <span class="mt-2">
-      {% if site.github %}
-      <a href="https://github.com/{{ site.github }}" target="_blank" class="text-muted"><i class="fab fa-github mr-1"></i></a>
-      {% endif %}
-      {% if site.instagram %}
-      <a href="https://instagram.com/{{ site.instagram }}" target="_blank"><i class="fab fa-instagram mr-1"></i></a>
-      {% endif %}
-    </span>
+  {% for contact in site.data.contacts %}
+    <a href="{{ contact.url }}" target="_blank" class=""><i class="{{ contact.fa-class }} mr-1"></i>{{ contact.user }}</a>
+  {% endfor %}
   <p class="text-muted mt-2">Jared Tulayan © 2020 :: Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-muted">Jekyll</a> :: <a href="{{ site.repo }}" target="_blank">View Source</a></p>
 </footer>
