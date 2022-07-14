@@ -1,31 +1,40 @@
 // PrismJS code style
 // Toolbar
-@use "text" as *;
+@use "sass:map";
+
+@use "colors" as *;
+@use "fonts" as *;
+@use "control" as *;
+@use "spacing" as *;
+
+$color-default: $color-fg;
+$color-variable: $color-fg;
+$color-primitive: map.get($colors, "orange");
+$color-class: map.get($colors, "purple");
+$color-keyword: $color-primary;
+$color-comment: $color-ok;
+$color-important: $color-important;
 
 .code-toolbar {
+    @include control;
 	position: relative;
-	margin: 2rem 0;
+	margin: map.get($spacing, "4") 0;
+	background: $color-bg;
 
 	.toolbar {
 		position: absolute;
-		top: 1rem;
-		right: 1rem;
+		bottom: map.get($spacing, "2");
+		right: map.get($spacing, "2");
 
 		button {
+            @include control;
+            font: inherit; 
 			visibility: hidden;
-			background: transparent;
-			border: 0.1rem solid $primary;
-			color: $primary;
-			padding: 0.5rem 1rem;
+			padding: map.get($spacing, "2") map.get($spacing, "3");
 
 			&:hover {
-				background: $primary;
-				color: $body-bg;
-			}
-
-			&:active {
-				background: $primary;
-				color: $primary;
+				background: $color-fg;
+				color: $color-bg;
 			}
 		}
 	}
@@ -42,7 +51,7 @@
 // Code Formatting
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #f8f8f2;
+	color: $color-default;
 	background: none;
 	font-family: $font-monospace;
 	text-align: left;
@@ -50,7 +59,7 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
+	line-height: 1;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
@@ -61,8 +70,8 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
+	padding: map.get($spacing, "3");
+	margin: map.get($spacing, "2") 0;
 	overflow: auto;
 }
 
@@ -70,11 +79,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #636f88;
+	color: $color-comment;
 }
 
 .token.punctuation {
-	color: #81A1C1;
+	color: $color-default;
 }
 
 .namespace {
@@ -86,15 +95,15 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #81A1C1;
+	color: $color-default;
 }
 
 .token.number {
-	color: #B48EAD;
+	color: $color-primitive;
 }
 
 .token.boolean {
-	color: #81A1C1;
+	color: $color-primitive;
 }
 
 .token.selector,
@@ -103,7 +112,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #A3BE8C;
+	color: $color-keyword;
 }
 
 .token.operator,
@@ -112,23 +121,23 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: #81A1C1;
+	color: $color-variable;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-	color: #88C0D0;
+	color: $color-class;
 }
 
 .token.keyword {
-	color: #81A1C1;
+	color: $color-keyword;
 }
 
 .token.regex,
 .token.important {
-	color: #EBCB8B;
+	color: $color-important;
 }
 
 .token.important,

@@ -29,6 +29,9 @@ $opacity: (
 $color-fg: map.get($colors, "black");
 $color-bg: map.get($colors, "white");
 $color-primary: map.get($colors, "blue");
+$color-warn: map.get($colors, "red");
+$color-ok: map.get($colors, "green");
+$color-important: map.get($colors, "yellow");
 $color-link: color.scale($color-primary, $lightness: -50%);
 $color-link-hover: color.scale($color-link, $lightness: 25%);
 $color-link-active: color.scale($color-link, $lightness: 40%);
