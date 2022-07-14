@@ -10,6 +10,6 @@ Params:
 <figure style="{% if include.width %}width: {{ include.width }}{% endif %}" class="md-figure{% for mod in include.mods %}{{ mod | prepend: " md-figure--" }}{% endfor %}">
     <img src="{{ include.src }}" style="{% if include.height %}height: {{ include.height }}{% endif %}" class="md-figure__image"/>
     {% if include.figcaption %}
-        <figcaption class="md-figure__caption">{{ include.figcaption }}</figcaption>
+        <figcaption class="md-figure__caption p-3">{{ include.figcaption }}</figcaption>
     {% endif %}
 </figure>

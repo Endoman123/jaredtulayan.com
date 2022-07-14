@@ -6,14 +6,11 @@
 .md-figure {
     @include control;
     @include clearfix;
-    @include p-spacing;
 
     display: inline-flex;
     flex-direction: column;
 
     &__caption {
-        padding: 0.25rem 0;
-        text-align: center;
         color: $color-bg;
         background: $color-fg;
     }

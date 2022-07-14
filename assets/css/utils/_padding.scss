@@ -3,19 +3,19 @@
 @use "spacing" as *;
 
 @each $i, $s in $spacing {
-    .p-l-#{$i} {
+    .pl-#{$i} {
         padding-left: $s;
     }
 
-    .p-r-#{$i} {
+    .pr-#{$i} {
         padding-right: $s;
     }
 
-    .p-t-#{$i} {
+    .pt-#{$i} {
         padding-top: $s;
     }
 
-    .p-b-#{$i} {
+    .pb-#{$i} {
         padding-bottom: $s;
     }
 

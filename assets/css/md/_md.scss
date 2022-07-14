@@ -1,0 +1,13 @@
+// Main formatting
+// This is done through hierarchy, not through BEM
+// as I can't attach BEM classes to kramdown HTML.
+@use "sass:map";
+@use "spacing" as *;
+
+.md {
+    > * {
+        &:not(:last-child) {
+            margin-bottom: map.get($spacing, "3");
+        }
+    }
+}

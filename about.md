@@ -1,7 +1,7 @@
 ---
 title: About Me
 ---
-{% include md/figure.html src="/assets/images/portrait.jpg" figcaption="Me" mods="left" %}
+{% include md/figure.html src="/assets/images/portrait.jpg" width="300px" height="300px" figcaption="Me" mods="left" %}
 I'm currently a student at Rutgers University, working towards a BS in Computer Science and a minor in music.
 
 Outside of programming, I enjoy making things, whether that's music or guitars or other bits or bobs.

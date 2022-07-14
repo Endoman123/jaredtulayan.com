@@ -1,9 +1,9 @@
-<header class="flexbox flexbox--row flexbox--cg--5 flexbox--a--center">
+<header class="flexbox flexbox--row flexbox--a--center">
     <!--Navbar Brand-->
-    <a class="navbar-brand bg-primary link-unstyled px-1" href="/">Jared Tulayan</a>
+    <a href="/">Jared Tulayan</a>
     
     <!--Breadcrumbs-->
-    <p class="my-auto pr-3">
+    <p class="my-auto ml-3">
       {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
       {% for crumb in crumbs offset: 1 %}
         <span>>

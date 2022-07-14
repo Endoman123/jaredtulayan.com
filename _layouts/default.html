@@ -5,9 +5,9 @@
 
 layout: base
 ---
-<body class="content content--filled flexbox flexbox--col p-4 mx-auto">
+<body class="card content flexbox flexbox--col p-4 mx-auto">
 {% include header.html %}
-<div class="container mt-2 mb-3">
+<div class="flexbox flexbox--col mt-2 mb-3">
   <h1>{{ page.title }}</h1>
   {% if page.collection != "projects" and page.date %}
     <p class="text-muted"><i class="fas fa-calendar-day"></i> {{ page.date | date: '%Y-%m-%d' }}</p>
@@ -25,8 +25,8 @@ layout: base
   {% endif %}
   <hr class="separator-strong">
 </div>
-<main>
-    {{ content }}
+<main class="{{ page.path | split: "/" | last | split: "." | last}}">
+  {{ content }}
 </main>
 {% include footer.html %}
 </body>
