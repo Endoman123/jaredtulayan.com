@@ -1,0 +1,10 @@
+- site: "GitHub"
+  user: "Endoman123"
+  url: "https://github.com/Endoman123"
+  fa-class: "fab fa-github"
+
+- site: "Instagram"
+  user: "@jared.tulayan"
+  url: "https://instagram.com/jared.tulayan"
+  fa-class: "fab fa-instagram"
+
