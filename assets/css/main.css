@@ -220,6 +220,12 @@ a:active {
   margin-left: 1.5rem;
   list-style-type: square;
 }
+.md em {
+  font-style: italic;
+}
+.md strong {
+  font-weight: bold;
+}
 
 .code-toolbar {
   border: 3px solid #0E0F19;
