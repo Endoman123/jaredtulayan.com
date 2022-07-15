@@ -7,8 +7,8 @@ Params:
     - width: image width
     - height: image height
 {% endcomment %}
-<figure style="{% if include.width %}width: {{ include.width }}{% endif %}" class="md-figure{% for mod in include.mods %}{{ mod | prepend: " md-figure--" }}{% endfor %}">
-    <img src="{{ include.src }}" style="{% if include.height %}height: {{ include.height }}{% endif %}" class="md-figure__image"/>
+<figure style="{% if include.width %}width: {{ include.width }};{% endif %}" class="md-figure{% for mod in include.mods %}{{ mod | prepend: " md-figure--" }}{% endfor %}">
+    <div style="background: url('{{ include.src }}') center; background-size: cover; width: 100%; {% if include.height %}padding-bottom: {{ include.height }};{% endif %}" class="md-figure__image"></div>
     {% if include.figcaption %}
         <figcaption class="md-figure__caption p-3">{{ include.figcaption }}</figcaption>
     {% endif %}
