@@ -1,0 +1,15 @@
+{% comment %}
+Generic Card Template
+Params:
+    - md: Markdown Content
+    - html: HTML Content
+    - padding: Padding-unit
+{% endcomment %}
+<div class="card {% if include.padding %} p-{{ include.padding }}{% endif %}">
+    {% if include.md %}
+    {{ include.md | markdownify }}
+    {% endif %}
+    {% if include.html %}
+        {{ include.md }}
+    {% endif %}
+</div>

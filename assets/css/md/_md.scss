@@ -20,4 +20,12 @@
         margin-left: map.get($spacing, "4");
         list-style-type: square;
     }
+
+    em {
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: bold;
+    }
 }
