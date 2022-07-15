@@ -38,4 +38,4 @@ on the TrueNAS system. This allows us to have DNS blocking, as well as cache DNS
 Finally, this is all routed through an eero mesh router and an unmanaged switch. Again, in hindsight, I should have taken a managed switch as having VLANs might have beena a
 useful feature for isolating all of our IoT devices.
 
-I hope to still add things to this stack; one such thing is a VPS so that my family and I can access this network wherever we are.
+I hope to still add things to this stack; one such thing is a VPN so that my family and I can access this network wherever we are.
