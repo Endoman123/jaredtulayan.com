@@ -1,14 +1,15 @@
 ---
 title: Home Network Stack
 description: A network stack complete with NAS, DNS resolver, and other niceties
-thumbnail: https://lh3.googleusercontent.com/D-JnEkv9NJ5fPCr9JKei6TqfpvttQ4CVU5X8FOMJNuwTXfTadq-hf9jrOjDgjC86YqoFMbdbXgrvxe4BigSJEYUs_EcvyGiLJKiIAI2s_RuwJO8NiFb6WHPNdXtd-pWG_G_qCbr1cr7W5OjpNbVyBhyfcnESnoz0xEi91GYGAGqwBRl3tOqabs0XUPZkUjaXM31iC1aUCCYje8L4OHjsgvBnawdX95Y9NXuKXLrvQ_-Qay_6qW5DZCwWCM1qxusyR2JctYAY9c4ZFnLrRuoCvzydjYf5FXIliKGCXzIuuPM6yq8M0cYYR1cMwm0fhjjbQQN__7ERv21V99peAHGLvvxGjiGKMYcAtudxP2GJuLGSV4-X80oKBUwrRCPUEpvhfoLm1pflwVI3tSFHZi0YcDhrIaT7Spgp-hmVeMw7ft8ZOBGsIdP7N3LLRKSsseJr0FkCU1vWIQN9WEaZtlGXehIOhbGgh2n4xhIcxDoU6bPA5LlpX3E_pxKtLlEP8PnbWSaRNMB35_eSzDsVrS_AAUxo-IIMSNkSFueY1LDOdpVjUgWjEupIyvhplwNfdejwZPE0Io3cpMmsE-EzctEgznn6NEDU8Dcc-DCUK1s_2iEV2GXPFdiatCfWv6UgnyjOoCvUOToksjx35f4mEqy7RnBSR4cVloSTsnDGBIugQG3pV2mPnp2hZqPuy2R7NPFRG3lCapAt3lpdiPoCMRtv6hAwbL41MA2eD75SmoAJ5uuzU2Mi3tigiSmSMBZ93VDmNrK6ByT0qHs3fm_D5SQOkDU9J69LbSqXO_6IhA=w563-h994-no?authuser=1
+thumbnail: /assets/images/rack.jpg
 ---
 {% capture note %}
 **NOTE:** _This was written **before** any posts about this project were written. As such, any documentation on current features are missing. However, new features may be posted since writing this._
 {% endcapture %}
 {% include md/card.html md=note padding=3 %}
 
-{% include md/figure.html src=page.thumbnail width="250px" height="125%" %}
+{% assign rack=page.thumbnail | absolute_url %}
+{% include md/figure.html src=rack width="250px" height="125%" %}
 Sometime in the summer before my senior year of college, I decided that my home network needed a well-needed makeover.
 So with the help of some of my parents' money, as well as some spare parts laying around the house, I built my home network
 a full network stack. This was challenging, particularly because of a set of requirements that I wanted to fulfill:

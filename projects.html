@@ -6,7 +6,7 @@ title: My Projects
   {% for item in site.projects %}
   <div class="card w-30">
       {% if item.thumbnail %}
-        <div class="ratio-1-1" style="background: url({{ item.thumbnail }}) center; background-size: cover"></div>
+        <div class="ratio-1-1" style="background: url({{ item.thumbnail | absolute_url }}) center; background-size: cover"></div>
       {% endif %}
       <div class="card__content text-center p-3">
         <a href="{{ item.url }}">{{ item.title }}</a>
