@@ -20,6 +20,14 @@
         justify-content: flex-start;
     }
 
+    &--j--center {
+        justify-content: center;
+    }
+
+    &--j--spaced {
+        justify-content: space-between;
+    }
+
     &--j--end {
         justify-content: flex-end;
     }

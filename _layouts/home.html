@@ -6,7 +6,8 @@ layout: base
 ---
 <body class="content flexbox flexbox--col p-4 mx-auto">
   <div class="card flexbox flexbox--col m-auto">
-    <image src="/assets/images/portrait.jpg"/>
+    <div class="ratio-1-1" style="background: url('/assets/images/portrait.jpg') center; background-size: cover;"></div>
+    <!--image src="/assets/images/portrait.jpg"/-->
     <div class="card__content flexbox flexbox--col p-3">
       <h1 class="text-center">Jared Tulayan</h1>
       <p class="text-center">Programmer, Maker, Musician</p>
@@ -16,8 +17,9 @@ layout: base
         {% endfor %}  
       </nav>
       <div class="flexbox flexbox--row mt-3">
-        {% for contact in site.data.contacts %}
-          <a href="{{ contact.url }}" target="_blank" class="mx-auto text-size-2"><i class="{{ contact.fa-class }}"></i></a>
+        {% assign accounts = site.data.contacts | concat: site.data.socials %}
+        {% for acc in accounts %}
+          <a href="{{ acc.url }}" target="_blank" class="mx-auto text-size-2"><i class="{{ acc.fa-class }}"></i></a>
         {% endfor %}
       </div>
     </div>

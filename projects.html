@@ -2,15 +2,13 @@
 permalink: /projects/
 title: My Projects
 ---
-<div class="flexbox flexbox--row flexbox--wrap">
+<div class="flexbox flexbox--row flexbox--wrap flexbox--rg--3 flexbox--cg--3">
   {% for item in site.projects %}
-  <div class="card mx-1 mb-2" style="width: 30%">
-      <div>
-        {% if item.thumbnail %}
+  <div class="card w-30">
+      {% if item.thumbnail %}
         <div class="ratio-1-1" style="background: url({{ item.thumbnail }}) center; background-size: cover"></div>
           <!--img src="{{ item.thumbnail }}" style="width: 100%"/-->
-        {% endif %}
-      </div>
+      {% endif %}
       <div class="card__content text-center p-3">
         <a href="{{ item.url }}">{{ item.title }}</a>
       </div>
