@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-11T02:19:31+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">A Needed Reflection</title><link href="/blog/reflection.html" rel="alternate" type="text/html" title="A Needed Reflection" /><published>2022-07-10T00:00:00+00:00</published><updated>2022-07-10T00:00:00+00:00</updated><id>/blog/reflection</id><content type="html" xml:base="/blog/reflection.html"><![CDATA[<p>I’ve neglected this website quite a bit, admittedly. Rather, I haven’t had a need or want to use it until recently. With that, I have been feeling like I want to do something with this. Maybe start taking the whole blogging thing seriously, start documenting my life and projects, I’m not sure.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-15T03:45:32+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">A Needed Reflection</title><link href="/blog/reflection.html" rel="alternate" type="text/html" title="A Needed Reflection" /><published>2022-07-10T00:00:00+00:00</published><updated>2022-07-10T00:00:00+00:00</updated><id>/blog/reflection</id><content type="html" xml:base="/blog/reflection.html"><![CDATA[<p>I’ve neglected this website quite a bit, admittedly. Rather, I haven’t had a need or want to use it until recently. With that, I have been feeling like I want to do something with this. Maybe start taking the whole blogging thing seriously, start documenting my life and projects, I’m not sure.</p>
 
 <p>First thing’s first: to make a house a home. This site was made back when I was a budding CS student. Unfortunately with time, my style and aesthetics have changed, so this site is gonna need some work. I’ve been picking out new fonts, and brainstorming some new layouts, so expect this site to go through some growing pains. Hopefully at the end, I can feel like this site is worth being on.</p>
 
-<figure style="width: 20%" class="md-figure md-figure--left">
-    <img src="https://lh3.googleusercontent.com/Lis1zLTofKQVIZ7C52BJEe1knUsOJcdPSh8utwTpqwHPQzkc6PUo3sMemNt4kDVHH1Ue9N2vvVE4k7GWl83WL738bAtPXjjV5rlAGXQKuVfIsRjTyB4TaSUUbl68YYaSbzA6bDw0qX3dqoxUtpgZ_69sTPXuLv2PBINDcqiiu_0aNqugu34cBheVDZTEIn8mVT-rCCeivM4iISBuSfRkQFqas_SNvvT0Wo_vBo3omepy8TdKtE4R4ZGr3O-Aygea5BviMMTn0fl1VDhgL13kait5edy_gZmFpUYPAl5RxH-QdGfpW2e6mstk40PtEEGUlSkkb1XcJxYOlXWSq8pWa6_yLi7xqaBukf-gK5a8xAyJlo0wXUeur2u3tJjrdMAHApESAoujgOsvEWjUEvduM939TYOrOr55TZ9mL5SvFSSbN0o5pzTcOa7DfDKjtoTvqug8MYpp-smrtPHc0e70d5lNCjywTfWPFNFVaw1vaZ6J8AbuTFXCpN5eD6Fff80yaszluAz-LoumlDBidKoRRO3ploQapaAR4uEX5ubtYx_QneP5svCsuDAirczfzARvVT5VbTTLI7PpYgNQKVsdzoLGaVez3RvtDMrj-AHiLYPL9FXvd3f4kjgC-czbzF_C6S_HJRnGC4I8OwdV_jVPgXhTio1OjCYdY8xAc9NBWSn-SnImnzwMVPB9_f-0QWb_MZxm8xDkYxQHslWmxGI21v5-gfvyapkd6owJUsDmrPgsYPr0NRmGxPJ3D6lTNiKmq9GBsyAzjquADh4PuT72QdGKCKW80AoOvFBPYA=w736-h977-no?authuser=1" style="height: 50%" class="md-figure__image" />
+<figure style="width: 250px;" class="md-figure md-figure--left">
+    <div style="background: url('https://lh3.googleusercontent.com/Lis1zLTofKQVIZ7C52BJEe1knUsOJcdPSh8utwTpqwHPQzkc6PUo3sMemNt4kDVHH1Ue9N2vvVE4k7GWl83WL738bAtPXjjV5rlAGXQKuVfIsRjTyB4TaSUUbl68YYaSbzA6bDw0qX3dqoxUtpgZ_69sTPXuLv2PBINDcqiiu_0aNqugu34cBheVDZTEIn8mVT-rCCeivM4iISBuSfRkQFqas_SNvvT0Wo_vBo3omepy8TdKtE4R4ZGr3O-Aygea5BviMMTn0fl1VDhgL13kait5edy_gZmFpUYPAl5RxH-QdGfpW2e6mstk40PtEEGUlSkkb1XcJxYOlXWSq8pWa6_yLi7xqaBukf-gK5a8xAyJlo0wXUeur2u3tJjrdMAHApESAoujgOsvEWjUEvduM939TYOrOr55TZ9mL5SvFSSbN0o5pzTcOa7DfDKjtoTvqug8MYpp-smrtPHc0e70d5lNCjywTfWPFNFVaw1vaZ6J8AbuTFXCpN5eD6Fff80yaszluAz-LoumlDBidKoRRO3ploQapaAR4uEX5ubtYx_QneP5svCsuDAirczfzARvVT5VbTTLI7PpYgNQKVsdzoLGaVez3RvtDMrj-AHiLYPL9FXvd3f4kjgC-czbzF_C6S_HJRnGC4I8OwdV_jVPgXhTio1OjCYdY8xAc9NBWSn-SnImnzwMVPB9_f-0QWb_MZxm8xDkYxQHslWmxGI21v5-gfvyapkd6owJUsDmrPgsYPr0NRmGxPJ3D6lTNiKmq9GBsyAzjquADh4PuT72QdGKCKW80AoOvFBPYA=w736-h977-no?authuser=1') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
     
-        <figcaption class="md-figure__caption">A stratocaster body I've been working on</figcaption>
+        <figcaption class="md-figure__caption p-3">A stratocaster body I've been working on</figcaption>
     
 </figure>
 
@@ -57,10 +57,10 @@ The following sections will provide more explanation on how this breakdown was d
 However, that doesn’t necessarily mean that you need to spend millions of dollars to get decent sounding audio. 
 Many times it just requires doing good research on the hardware that you need to get so you get the best bang-for-buck.</p>
 
-<figure style="width: 20%" class="md-figure md-figure--left">
-    <img src="https://yourfreesounds.com/wp-content/uploads/2020/08/cardioid_pattern_graphics_wMic.png" style="height: 20%" class="md-figure__image" />
+<figure style="width: 20%;" class="md-figure md-figure--left">
+    <div style="background: url('https://yourfreesounds.com/wp-content/uploads/2020/08/cardioid_pattern_graphics_wMic.png') center; background-size: cover; width: 100%; padding-bottom: 20%;" class="md-figure__image"></div>
     
-        <figcaption class="md-figure__caption">Cardiod Pickup Pattern <br /><i>source: yourfreesounds.com</i></figcaption>
+        <figcaption class="md-figure__caption p-3">Cardiod Pickup Pattern <br /><i>source: yourfreesounds.com</i></figcaption>
     
 </figure>
 
@@ -77,10 +77,10 @@ i.e.: where around the microphone will it pick up sound. A cardioid pattern pick
 <br />
 <br /></p>
 
-<figure style="width: 20%" class="md-figure md-figure--right">
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.sweetwater.com%2Fimages%2Fitems%2F750%2FUM2usb-large.jpg" style="height: 50%" class="md-figure__image" />
+<figure style="width: 20%;" class="md-figure md-figure--right">
+    <div style="background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.sweetwater.com%2Fimages%2Fitems%2F750%2FUM2usb-large.jpg') center; background-size: cover; width: 100%; padding-bottom: 50%;" class="md-figure__image"></div>
     
-        <figcaption class="md-figure__caption">Behringer UM2 Audio Interface <br /><i>source: Sweetwater</i></figcaption>
+        <figcaption class="md-figure__caption p-3">Behringer UM2 Audio Interface <br /><i>source: Sweetwater</i></figcaption>
     
 </figure>
 
@@ -170,10 +170,10 @@ hum that comes from flouorescent lights.</li>
 <h2 id="example">EXAMPLE</h2>
 <p>For a real-life example of what this information would look like applied, take my apartment room and gear for example.</p>
 
-<figure style="width: 25%" class="md-figure md-figure--right">
-    <img src="/assets/2021-11-04/room.jpg" style="height: 50%" class="md-figure__image" />
+<figure style="width: 25%;" class="md-figure md-figure--right">
+    <div style="background: url('/assets/2021-11-04/room.jpg') center; background-size: cover; width: 100%; padding-bottom: 50%;" class="md-figure__image"></div>
     
-        <figcaption class="md-figure__caption">Corners of my room</figcaption>
+        <figcaption class="md-figure__caption p-3">Corners of my room</figcaption>
     
 </figure>
 
