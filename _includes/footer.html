@@ -1,9 +1,9 @@
-<footer class="flexbox flexbox--col flexbox--cg--1 pt-3 mt-auto">
+<footer class="flexbox flexbox--col flexbox--rg--1 pt-3 mt-auto">
   <h5>Contact Me:</h5>
   {% for contact in site.data.contacts %}
     <a href="{{ contact.url }}" target="_blank" class=""><i class="{{ contact.fa-class }} mr-1"></i>{{ contact.user }}</a>
   {% endfor %}
-  <div class="flexbox flexbox--row flexbox--rg--1 mt-2">
+  <div class="flexbox flexbox--row flexbox--cg--2 mt-2">
   {% for social in site.data.socials %}
     <a href="{{ social.url }}" target="_blank" class=""><i class="{{ social.fa-class }} mr-1"></i></a>
   {% endfor %}
