@@ -85,6 +85,10 @@ a:active {
   color: #5aa3c2;
 }
 
+html {
+  font-size: clamp(12px, 2vw, 18px);
+}
+
 .content {
   min-height: 100vh;
   max-width: 50rem;
