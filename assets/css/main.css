@@ -69,9 +69,6 @@ h4, h5, h6 {
 html {
   background-image: url("../images/background.jpg");
   background-size: cover;
-}
-
-p, li {
   color: #0E0F19;
 }
 
