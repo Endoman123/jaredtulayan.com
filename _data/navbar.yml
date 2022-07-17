@@ -4,9 +4,5 @@
 - name: Projects
   link: /projects
 
-- name: Resume
-  link: /assets/documents/resume.pdf
-  newtab: true
-
 - name: Blog
   link: /blog
