@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!--Basic header defaults-->
+
+<!--Needed meta information-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<!--Style imports-->
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="https://kit.fontawesome.com/bd41fba6db.js" crossorigin="anonymous"></script>
+
+<!--
+  PrismJS. Probably shouldn't load this here.
+  Oh well.
+-->
+<script src="/assets/js/prism.js"></script>
+
+<!--Site Title-->
+<title>
+
+        Making a Home VPN :: Jared Tulayan
+
+</title>
+
+  </head>
+  <body class="content content--filled flexbox flexbox--col p-4 mx-auto">
+<header class="flexbox flexbox--row flexbox--a--center">
+    <!--Navbar Brand-->
+    <a href="/">Jared Tulayan</a>
+    
+    <!--Breadcrumbs-->
+    <p class="my-auto ml-3">
+      
+      
+        <span>>
+        
+          <a href="/blog/" class="text-secondary">blog</a>
+        
+        </span>
+      
+        <span>>
+        
+          vpn1.html
+        
+        </span>
+      
+    </p>
+    
+    <!--Navbar Menu-->
+    <nav class="flexbox flexbox--row flexbox--cg--3 ml-auto">
+      
+        <a class="button" href="/about.html" >About</a>
+      
+        <a class="button" href="/projects" >Projects</a>
+      
+        <a class="button" href="/blog" >Blog</a>
+        
+    </nav>
+</header>
+
+<div class="flexbox flexbox--col mt-2 mb-3">
+  <h1 class="mb-2">Making a Home VPN</h1>
+  
+    <p class="mb-2"><i class="fas fa-calendar-day"></i> 2022-07-19</p>
+  
+  
+    <p class="text-muted mt-auto">
+      
+      
+        #network
+      
+    </p> 
+  
+  
+  <hr class="separator-strong">
+</div>
+<main class="md">
+  <p>So right before I left for my trip to Florida I realized that there was no way to access my
+home network remotely. This was a bit of a sitch, so now that I’m back, I’m finally going to make one.</p>
+
+<p>This can be done in two ways, and I’m thinking of doing the former:</p>
+<ul>
+  <li>Create a jail/container on my NAS machine, host it there</li>
+  <li>Set up another device and have it on bare metal</li>
+</ul>
+
+<p>While writing this, I tried doing all of this via a TrueNAS jail, but jails were missing features that I needed
+for configuring and running a VPN. Luckily, I have a bunch of laptops laying around that I can install
+OpenBSD on.</p>
+
+<figure style="width: 100%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-19/laptop.jpg') center; background-size: cover; width: 100%; padding-bottom: 75%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">An old ACER Aspire that I installed OpenBSD 7.1 onto</figcaption>
+    
+</figure>
+
+<p>I basically followed <a href="https://www.youtube.com/watch?v=szGsh5J9bzY">Mental Outlaw’s guide</a> on hosting a 
+WireGuard VPN on OpenBSD, but the steps are as follows:</p>
+      <h4 id="vpn-server">
+        
+        
+          VPN Server <a href="#vpn-server" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h4>
+<ol>
+  <li>
+    <p>I installed OpenBSD on my laptop, gave it a static IP, etc. I don’t believe having the IP be
+dynamic would actually cause any issues, but it would be easier to configure on a static IP.</p>
+  </li>
+  <li>Allow ip forwarding. This needs to be put in <code class="language-plaintext highlighter-rouge">/etc/sysctl.conf</code> for it to be persistent across reboots, apparently.
+    <div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">net</span>.<span class="n">inet</span>.<span class="n">ip</span>.<span class="n">forwarding</span>=<span class="m">1</span>
+ <span class="n">machdep</span>.<span class="n">lidswitch</span>=<span class="m">0</span> <span class="c"># Needed to disable suspend on lid close
+</span></code></pre></div>    </div>
+  </li>
+  <li>Install WireGuard and generate a keypair. Luckily, WireGuard has utilities for generating keys.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # wg genkey &gt; private.key
+ # wg pubkey &lt; private.key &gt; public.key
+</code></pre></div>    </div>
+  </li>
+  <li>Configure WireGuard. WireGuard doesn’t have a default config, but this should be enough to get it started.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [Interface]
+ ListenPort = ******
+ PrivateKey = ******************************************** # Server private key
+    
+ [Peer]
+ PublicKey = ******************************************** # Client public key
+ AllowedIPs = ***.***.***.***/**
+ PersistentKeepalive = ***
+</code></pre></div>    </div>
+  </li>
+  <li>Configure pf/firewall. I think I only need to add the following 3 lines:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pass in on wg0
+ pass in inet proto udp from any to any port ***** # This port is the same as the listen port
+ pass out on egress inet from (wg0:network) nat-to (bge:0)
+</code></pre></div>    </div>
+    <p>In the video, he’s using a Vultr VPS, which seems to have <code class="language-plaintext highlighter-rouge">vio0</code> as the default interface.
+From my <code class="language-plaintext highlighter-rouge">ifconfig</code>, I believe that my device is <code class="language-plaintext highlighter-rouge">bge0</code>.</p>
+  </li>
+  <li>Configure the VPN ip settings. This is put into <code class="language-plaintext highlighter-rouge">/etc/hostname.wg0</code>.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> inet xxx.xxx.xxx.xxx xxx.xxx.xxx.xxx NONE # ip addr and netmask
+ up
+ !/usr/local/bin/wg setconf wg0 /etc/wireguard/wg0.conf
+</code></pre></div>    </div>
+    <p>From here, I can simply start up the <code class="language-plaintext highlighter-rouge">wg0</code> device with</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # sh /etc/netstart wg0
+</code></pre></div>    </div>
+    <p>and it should start accepting connections to the VPN.</p>
+  </li>
+</ol>
+    
+      <h4 id="vpn-client">
+        
+        
+          VPN Client <a href="#vpn-client" class="hanchor link-unstyled text-primary">#</a>
+        
+        
+      </h4>
+<p>Configuration for the client is about the same, but I configured via <code class="language-plaintext highlighter-rouge">systemd-networkd</code>, so I used networkd-unit files.</p>
+<ol>
+  <li>Generate wireguard keypar.</li>
+  <li>Created the WireGuard net device. The configuration is basically the same, just an added <code class="language-plaintext highlighter-rouge">NetDev</code> header. 
+<code class="language-plaintext highlighter-rouge">Interface</code> info now goes under <code class="language-plaintext highlighter-rouge">WireGuard</code> and <code class="language-plaintext highlighter-rouge">Peer</code> info now goes under <code class="language-plaintext highlighter-rouge">WireGuardPeer</code>.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [NetDev]
+ Name=wg0
+ type=wireguard
+ Description=WireGuard tunnel
+    
+ [WireGuard]
+ PrivateKey=******************************************** # Client private key
+
+ [WireGuardPeer]
+ PublicKey=******************************************** # Server public key
+ Endpoint=***.***.***.***:****** # Server public IP and wireguard listening port
+ AllowedIPs=***.***.***.***/*** # Allowed IPs and netmasks, you can use wildcards
+</code></pre></div>    </div>
+  </li>
+  <li>Added the associated network configuration.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [Match]
+ Name=wg0
+    
+ [Network]
+ Address=***.***.***.***/***
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Now I can just reload <code class="language-plaintext highlighter-rouge">systemd-networkd</code> and it should connect. I can successfully ping to the VPN server, but I can’t route the internet through it. I’ll have to figure out that another time.</p>
+</main>
+<footer class="flexbox flexbox--col flexbox--rg--1 pt-3 mt-auto">
+  <h5>Contact Me:</h5>
+  
+    <a href="mailto:jared@jaredtulayan.xyz" target="_blank" class=""><i class="fas fa-envelope mr-1"></i>jared@jaredtulayan.xyz</a>
+  
+    <a href="tel:+16093614018" target="_blank" class=""><i class="fas fa-phone-alt mr-1"></i>+1 (609) 361-4018</a>
+  
+    <a href="" target="_blank" class=""><i class="fas fa-paper-plane mr-1"></i>@Endoman123</a>
+  
+  <div class="flexbox flexbox--row flexbox--cg--2 mt-2">
+  
+    <a href="https://github.com/Endoman123" target="_blank" class=""><i class="fab fa-github mr-1"></i></a>
+  
+    <a href="https://instagram.com/jared.tulayan" target="_blank" class=""><i class="fab fa-instagram mr-1"></i></a>
+  
+  </div>
+  <p class="mt-2">Jared Tulayan © 2022 :: Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-muted">Jekyll</a> :: <a href="https://github.com/Endoman123/jaredtulayan.xyz" target="_blank">View Source</a></p>
+</footer>
+
+</body>
+
+</html>

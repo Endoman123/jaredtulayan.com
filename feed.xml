@@ -1,4 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-17T19:29:39+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">A Needed Reflection</title><link href="/blog/reflection.html" rel="alternate" type="text/html" title="A Needed Reflection" /><published>2022-07-10T00:00:00+00:00</published><updated>2022-07-10T00:00:00+00:00</updated><id>/blog/reflection</id><content type="html" xml:base="/blog/reflection.html"><![CDATA[<p>I’ve neglected this website quite a bit, admittedly. Rather, I haven’t had a need or want to use it until recently. With that, I have been feeling like I want to do something with this. Maybe start taking the whole blogging thing seriously, start documenting my life and projects, I’m not sure.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-19T22:29:34+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Making a Home VPN</title><link href="/blog/vpn1.html" rel="alternate" type="text/html" title="Making a Home VPN" /><published>2022-07-19T00:00:00+00:00</published><updated>2022-07-19T00:00:00+00:00</updated><id>/blog/vpn1</id><content type="html" xml:base="/blog/vpn1.html"><![CDATA[<p>So right before I left for my trip to Florida I realized that there was no way to access my
+home network remotely. This was a bit of a sitch, so now that I’m back, I’m finally going to make one.</p>
+
+<p>This can be done in two ways, and I’m thinking of doing the former:</p>
+<ul>
+  <li>Create a jail/container on my NAS machine, host it there</li>
+  <li>Set up another device and have it on bare metal</li>
+</ul>
+
+<p>While writing this, I tried doing all of this via a TrueNAS jail, but jails were missing features that I needed
+for configuring and running a VPN. Luckily, I have a bunch of laptops laying around that I can install
+OpenBSD on.</p>
+
+<figure style="width: 100%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-19/laptop.jpg') center; background-size: cover; width: 100%; padding-bottom: 75%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">An old ACER Aspire that I installed OpenBSD 7.1 onto</figcaption>
+    
+</figure>
+
+<p>I basically followed <a href="https://www.youtube.com/watch?v=szGsh5J9bzY">Mental Outlaw’s guide</a> on hosting a 
+WireGuard VPN on OpenBSD, but the steps are as follows:</p>
+
+<h4 id="vpn-server">VPN Server</h4>
+<ol>
+  <li>
+    <p>I installed OpenBSD on my laptop, gave it a static IP, etc. I don’t believe having the IP be
+dynamic would actually cause any issues, but it would be easier to configure on a static IP.</p>
+  </li>
+  <li>Allow ip forwarding. This needs to be put in <code class="language-plaintext highlighter-rouge">/etc/sysctl.conf</code> for it to be persistent across reboots, apparently.
+    <div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">net</span>.<span class="n">inet</span>.<span class="n">ip</span>.<span class="n">forwarding</span>=<span class="m">1</span>
+ <span class="n">machdep</span>.<span class="n">lidswitch</span>=<span class="m">0</span> <span class="c"># Needed to disable suspend on lid close
+</span></code></pre></div>    </div>
+  </li>
+  <li>Install WireGuard and generate a keypair. Luckily, WireGuard has utilities for generating keys.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # wg genkey &gt; private.key
+ # wg pubkey &lt; private.key &gt; public.key
+</code></pre></div>    </div>
+  </li>
+  <li>Configure WireGuard. WireGuard doesn’t have a default config, but this should be enough to get it started.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [Interface]
+ ListenPort = ******
+ PrivateKey = ******************************************** # Server private key
+    
+ [Peer]
+ PublicKey = ******************************************** # Client public key
+ AllowedIPs = ***.***.***.***/**
+ PersistentKeepalive = ***
+</code></pre></div>    </div>
+  </li>
+  <li>Configure pf/firewall. I think I only need to add the following 3 lines:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pass in on wg0
+ pass in inet proto udp from any to any port ***** # This port is the same as the listen port
+ pass out on egress inet from (wg0:network) nat-to (bge:0)
+</code></pre></div>    </div>
+    <p>In the video, he’s using a Vultr VPS, which seems to have <code class="language-plaintext highlighter-rouge">vio0</code> as the default interface.
+From my <code class="language-plaintext highlighter-rouge">ifconfig</code>, I believe that my device is <code class="language-plaintext highlighter-rouge">bge0</code>.</p>
+  </li>
+  <li>Configure the VPN ip settings. This is put into <code class="language-plaintext highlighter-rouge">/etc/hostname.wg0</code>.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> inet xxx.xxx.xxx.xxx xxx.xxx.xxx.xxx NONE # ip addr and netmask
+ up
+ !/usr/local/bin/wg setconf wg0 /etc/wireguard/wg0.conf
+</code></pre></div>    </div>
+    <p>From here, I can simply start up the <code class="language-plaintext highlighter-rouge">wg0</code> device with</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # sh /etc/netstart wg0
+</code></pre></div>    </div>
+    <p>and it should start accepting connections to the VPN.</p>
+  </li>
+</ol>
+
+<h4 id="vpn-client">VPN Client</h4>
+<p>Configuration for the client is about the same, but I configured via <code class="language-plaintext highlighter-rouge">systemd-networkd</code>, so I used networkd-unit files.</p>
+<ol>
+  <li>Generate wireguard keypar.</li>
+  <li>Created the WireGuard net device. The configuration is basically the same, just an added <code class="language-plaintext highlighter-rouge">NetDev</code> header. 
+<code class="language-plaintext highlighter-rouge">Interface</code> info now goes under <code class="language-plaintext highlighter-rouge">WireGuard</code> and <code class="language-plaintext highlighter-rouge">Peer</code> info now goes under <code class="language-plaintext highlighter-rouge">WireGuardPeer</code>.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [NetDev]
+ Name=wg0
+ type=wireguard
+ Description=WireGuard tunnel
+    
+ [WireGuard]
+ PrivateKey=******************************************** # Client private key
+
+ [WireGuardPeer]
+ PublicKey=******************************************** # Server public key
+ Endpoint=***.***.***.***:****** # Server public IP and wireguard listening port
+ AllowedIPs=***.***.***.***/*** # Allowed IPs and netmasks, you can use wildcards
+</code></pre></div>    </div>
+  </li>
+  <li>Added the associated network configuration.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [Match]
+ Name=wg0
+    
+ [Network]
+ Address=***.***.***.***/***
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Now I can just reload <code class="language-plaintext highlighter-rouge">systemd-networkd</code> and it should connect. I can successfully ping to the VPN server, but I can’t route the internet through it. I’ll have to figure out that another time.</p>]]></content><author><name></name></author><category term="network" /><summary type="html"><![CDATA[So right before I left for my trip to Florida I realized that there was no way to access my home network remotely. This was a bit of a sitch, so now that I’m back, I’m finally going to make one.]]></summary></entry><entry><title type="html">A Needed Reflection</title><link href="/blog/reflection.html" rel="alternate" type="text/html" title="A Needed Reflection" /><published>2022-07-10T00:00:00+00:00</published><updated>2022-07-10T00:00:00+00:00</updated><id>/blog/reflection</id><content type="html" xml:base="/blog/reflection.html"><![CDATA[<p>I’ve neglected this website quite a bit, admittedly. Rather, I haven’t had a need or want to use it until recently. With that, I have been feeling like I want to do something with this. Maybe start taking the whole blogging thing seriously, start documenting my life and projects, I’m not sure.</p>
 
 <p>First thing’s first: to make a house a home. This site was made back when I was a budding CS student. Unfortunately with time, my style and aesthetics have changed, so this site is gonna need some work. I’ve been picking out new fonts, and brainstorming some new layouts, so expect this site to go through some growing pains. Hopefully at the end, I can feel like this site is worth being on.</p>
 
