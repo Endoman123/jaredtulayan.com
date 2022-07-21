@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap&family=Inconsolata:wght@400;700&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -49,7 +49,7 @@ input {
 
 @font-face {
   font-family: "Cozette", monospace;
-  src: url("../fonts/CozetteVector.ttf") format("truetype");
+  src: url("../../fonts/cozette_bitmap.ttf") format("truetype");
 }
 html {
   font-family: "Courier Prime", monospace;
@@ -227,51 +227,55 @@ html {
 .md strong {
   font-weight: bold;
 }
+.md code[class*=highlighter-] {
+  background: #F2F7F2;
+  font-family: "Inconsolata", monospace;
+  border-radius: 0.25rem;
+  padding: 0 2px;
+}
 
-.code-toolbar {
+div[class*=highlighter-] .code-toolbar {
   border: 3px solid #0E0F19;
   box-shadow: 4px 4px rgba(14, 15, 25, 0.25);
   position: relative;
   margin: 1.5rem 0;
   background: #F2F7F2;
 }
-.code-toolbar--borderless {
+div[class*=highlighter-] .code-toolbar--borderless {
   border: none;
 }
-.code-toolbar--flat {
+div[class*=highlighter-] .code-toolbar--flat {
   box-shadow: none;
 }
-.code-toolbar .toolbar {
+div[class*=highlighter-] .code-toolbar .toolbar {
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
 }
-.code-toolbar .toolbar button {
+div[class*=highlighter-] .code-toolbar .toolbar button {
   border: 3px solid #0E0F19;
   box-shadow: 4px 4px rgba(14, 15, 25, 0.25);
   font: inherit;
   visibility: hidden;
   padding: 0.5rem 1rem;
 }
-.code-toolbar .toolbar button--borderless {
+div[class*=highlighter-] .code-toolbar .toolbar button--borderless {
   border: none;
 }
-.code-toolbar .toolbar button--flat {
+div[class*=highlighter-] .code-toolbar .toolbar button--flat {
   box-shadow: none;
 }
-.code-toolbar .toolbar button:hover {
+div[class*=highlighter-] .code-toolbar .toolbar button:hover {
   background: #0E0F19;
   color: #F2F7F2;
 }
-.code-toolbar:hover .toolbar button {
+div[class*=highlighter-] .code-toolbar:hover .toolbar button {
   visibility: visible;
 }
-
-code[class*=language-],
-pre[class*=language-] {
+div[class*=highlighter-] pre[class*=language-] {
   color: #0E0F19;
   background: none;
-  font-family: "Cozette", monospace;
+  font-family: "Inconsolata", monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -286,88 +290,73 @@ pre[class*=language-] {
   -ms-hyphens: none;
   hyphens: none;
 }
-
-pre[class*=language-] {
+div[class*=highlighter-] pre[class*=language-] {
   padding: 1rem;
   margin: 0.5rem 0;
   overflow: auto;
 }
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
+div[class*=highlighter-] .token.comment,
+div[class*=highlighter-] .token.prolog,
+div[class*=highlighter-] .token.doctype,
+div[class*=highlighter-] .token.cdata {
   color: #6FAF5A;
 }
-
-.token.punctuation {
+div[class*=highlighter-] .token.punctuation {
   color: #0E0F19;
 }
-
-.namespace {
+div[class*=highlighter-] .namespace {
   opacity: 0.7;
 }
-
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
+div[class*=highlighter-] .token.property,
+div[class*=highlighter-] .token.tag,
+div[class*=highlighter-] .token.constant,
+div[class*=highlighter-] .token.symbol,
+div[class*=highlighter-] .token.deleted {
   color: #0E0F19;
 }
-
-.token.number {
+div[class*=highlighter-] .token.number {
   color: #FF430A;
 }
-
-.token.boolean {
+div[class*=highlighter-] .token.boolean {
   color: #FF430A;
 }
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
+div[class*=highlighter-] .token.selector,
+div[class*=highlighter-] .token.attr-name,
+div[class*=highlighter-] .token.string,
+div[class*=highlighter-] .token.char,
+div[class*=highlighter-] .token.builtin,
+div[class*=highlighter-] .token.inserted {
   color: #4C9BBD;
 }
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
+div[class*=highlighter-] .token.operator,
+div[class*=highlighter-] .token.entity,
+div[class*=highlighter-] .token.url,
+div[class*=highlighter-] .language-css .token.string,
+div[class*=highlighter-] .style .token.string,
+div[class*=highlighter-] .token.variable {
   color: #0E0F19;
 }
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
+div[class*=highlighter-] .token.atrule,
+div[class*=highlighter-] .token.attr-value,
+div[class*=highlighter-] .token.function,
+div[class*=highlighter-] .token.class-name {
   color: #77678E;
 }
-
-.token.keyword {
+div[class*=highlighter-] .token.keyword {
   color: #4C9BBD;
 }
-
-.token.regex,
-.token.important {
+div[class*=highlighter-] .token.regex,
+div[class*=highlighter-] .token.important {
   color: #FFC914;
 }
-
-.token.important,
-.token.bold {
+div[class*=highlighter-] .token.important,
+div[class*=highlighter-] .token.bold {
   font-weight: bold;
 }
-
-.token.italic {
+div[class*=highlighter-] .token.italic {
   font-style: italic;
 }
-
-.token.entity {
+div[class*=highlighter-] .token.entity {
   cursor: help;
 }
 
