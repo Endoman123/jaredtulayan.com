@@ -2,6 +2,10 @@
 // This is done through hierarchy, not through BEM
 // as I can't attach BEM classes to kramdown HTML.
 @use "sass:map";
+
+@use "colors" as *;
+@use "fonts" as *;
+@use "control" as *;
 @use "spacing" as *;
 
 .md {
@@ -27,5 +31,12 @@
 
     strong {
         font-weight: bold;
+    }
+
+    code[class*="highlighter-"] {
+        background: $color-bg;
+        font-family: $font-monospace;
+        border-radius: map.get($spacing, "1");
+        padding: 0 2px;
     }
 }
