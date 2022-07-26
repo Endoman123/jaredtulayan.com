@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-21T22:50:42+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Home VPN, pt. 1: A Basic Setup</title><link href="/blog/vpn1.html" rel="alternate" type="text/html" title="Home VPN, pt. 1: A Basic Setup" /><published>2022-07-19T00:00:00+00:00</published><updated>2022-07-19T00:00:00+00:00</updated><id>/blog/vpn1</id><content type="html" xml:base="/blog/vpn1.html"><![CDATA[<p>So right before I left for my trip to Florida I realized that there was no way to access my
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-26T03:29:42+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Luthery Log 1: Starcaster Build</title><link href="/blog/luther1.html" rel="alternate" type="text/html" title="Luthery Log 1: Starcaster Build" /><published>2022-07-25T00:00:00+00:00</published><updated>2022-07-25T00:00:00+00:00</updated><id>/blog/luther1</id><content type="html" xml:base="/blog/luther1.html"><![CDATA[<p>I have had this dream: to own some kind of semi-hollow guitar of my own making.</p>
+
+<p><br /></p>
+
+<figure style="width: 100%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-25/riviera.jpg') center; background-size: cover; width: 100%; padding-bottom: 38%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">A wine red Epiphone Riviera P93</figcaption>
+    
+</figure>
+
+<p>At first, it was going to be an Epiphone Riviera P93, partially because this dream started when I was
+in high school: I was getting into The Strokes, and Nick Valensi’s P94 was something I’ve always wanted to own. 
+However, it didn’t feel like my style, and so my dream settled on this wine red P93, with its beautiful gold hardware
+and triple dogear P90 setup. Tonewise, it was bright and airy due to the single coil setup and semi-hollow body,
+but the tone could also fatten up with the right settings. I found out recently Lucy Dacus also uses it, which
+had further set this guitar as something of a dream to acquire.</p>
+
+<p><br /></p>
+
+<figure style="width: 100%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-25/starcaster.jpg') center; background-size: cover; width: 100%; padding-bottom: 40%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">Fender's Modern Player Starcaster in Cherry Red Sunburst</figcaption>
+    
+</figure>
+
+<p>However, I had also begun getting into Deep Sea Diver at the same time, and the lead guitarist Jessica Dobson always
+rocked this cherry sunburst semi-hollow guitar that I had never seen the likes of before. Research had me find out that
+it was a Fender Modern Player Starcaster, and my mind had fixated on this guitar as well. Something about the stylings of
+a Fender in a semi-hollow guitar package was very alluring to me. The hardware wasn’t that eccentric; just two humbuckers
+and a Tune-o-matic, but the tone and style was unique; I had never seen an offset body used for a semi-hollow,
+nor had I seen the likes of a stepdown headstock. The tone was unique too: because the body was separate from neck, the 
+transfer of energy  between the neck and the body was different as opposed to a set neck, creating a different tone. 
+However, in the hands of people like Jessica Dobson, the tone could shift, change, transform into something more.
+I fell in love with it when I saw it first used by her.</p>
+
+<p>Somehow, I just never seemed to be able to settle on one, so in college, I planned to make a cross between the two:
+a Fender Starcaster with the hardware and color of a P93. It is a major challenge: if you look online for any information
+regarding this guitar, there is little to none; the guitar was largely unsuccessful, so Fender had stopped producing them
+altogether. You can find Fender Starcasters used, but for extremely high prices. The next best thing was a Squier
+Starcaster, but I’m not a fan of the Squier humbuckers, Besides, I was hoping to treat this project as my magnum opus,
+my biggest project yet before I leave the Makerspace.</p>
+
+<p>Today I started with machining out the centerblock, top, and bottom. According to some documents and forums I read online,
+the starcaster is a sandwich, much like a Thinline Telecaster. Ideally the sides would be bent, but I haven’t been able
+to get the tooling to make veneer, or the tooling to bend said veneer. Making a centerblock with the sides attached would
+just be easier from a logistics standpoint.</p>
+
+<figure style="width: 30%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-25/split.jpg') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">A split in the centerblock...</figcaption>
+    
+</figure>
+
+<p>Machining the centerblock wasn’t hard; it’s a one sided job, and the body isn’t too thick. There were a couple things I found out:</p>
+<ul>
+  <li>The router was connected to a shared outlet. It tripped a breaker in the middle of the cut. That might’ve been from me, 2 years ago.</li>
+  <li>The centerblock is super fragile! It split at some point after the machining. Luckily, the split was clean and easy to fix.</li>
+</ul>
+
+<p>After machining the centerblock, I had to machine the tops. Earlier, I had jointed a face by using a planer sled that allows me to move a piece
+through the planer with shims. It yields a flatter result than surfacing it on the CNC, but only if you shim the piece properly.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-25/sled.jpg') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>I began to machine the underside of the top. I had used a 3D printer to print a top prototype prior to machining to get an idea of the topology, so I wasn’t going in completely blind.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-25/prototype.jpg') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>This was pretty good, though it took really long–about 30 minutes for both a roughing and finishing pass. For future cuts, I may just stick to only a finishing pass; the delta is minimal</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-25/top.jpg') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p><br /></p>
+
+<p>This was all I could finish today; I started at 3:00 in the afternoon, and I ended at 10:00–a couple of hours after my shift ended.</p>
+
+<p>Hopefully future updates aren’t as jam-packed as this; I was trying to fit in a lot of work that I had missed due to COVID.</p>]]></content><author><name></name></author><category term="art" /><category term="woodworking" /><category term="guitar" /><category term="makerspace" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Home VPN, pt. 1: A Basic Setup</title><link href="/blog/vpn1.html" rel="alternate" type="text/html" title="Home VPN, pt. 1: A Basic Setup" /><published>2022-07-19T00:00:00+00:00</published><updated>2022-07-19T00:00:00+00:00</updated><id>/blog/vpn1</id><content type="html" xml:base="/blog/vpn1.html"><![CDATA[<p>So right before I left for my trip to Florida I realized that there was no way to access my
 home network remotely. This was a bit of a sitch, so now that I’m back, I’m finally going to make one.</p>
 
 <p>This can be done in two ways, and I’m thinking of doing the former:</p>
