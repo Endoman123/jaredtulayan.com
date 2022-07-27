@@ -1,4 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-26T03:29:42+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Luthery Log 1: Starcaster Build</title><link href="/blog/luther1.html" rel="alternate" type="text/html" title="Luthery Log 1: Starcaster Build" /><published>2022-07-25T00:00:00+00:00</published><updated>2022-07-25T00:00:00+00:00</updated><id>/blog/luther1</id><content type="html" xml:base="/blog/luther1.html"><![CDATA[<p>I have had this dream: to own some kind of semi-hollow guitar of my own making.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-27T04:42:04+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Luthery Log 2: Starcaster Build Goes Somewhat Wrong</title><link href="/blog/luther2.html" rel="alternate" type="text/html" title="Luthery Log 2: Starcaster Build Goes Somewhat Wrong" /><published>2022-07-26T00:00:00+00:00</published><updated>2022-07-26T00:00:00+00:00</updated><id>/blog/luther2</id><content type="html" xml:base="/blog/luther2.html"><![CDATA[<p>Today I focused on getting the top and bottom carved out.</p>
+
+<p>Unfortunately, things did not go quite as planned, but such is the way of life.</p>
+
+<p>To start off with the good: I did carve the top, and it looks great.
+The odd geometry of the model that I used to carve the top seems to not be too bad. 
+I was able to sand it smooth pretty easily.</p>
+
+<figure style="width: 100%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-26/finish.jpg') center; background-size: cover; width: 100%; padding-bottom: 90%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">The top carve is very gentle, and the terrible gemoetry isn't so noticeable</figcaption>
+    
+</figure>
+
+<p>The top mates well with the center, and the glue from yesterday set properly, so that crack is basically sealed.
+I did notice that the guitar centerblock was a bit too thick, so I took it to the CNC to surface it down some.
+This left the thickness of the top at ~1.35”, since the thickness of the top and bottom at their edges were ~0.4” total, and the total thickness
+of the guitar needed to be 1.75” from top edge to bottom edge.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-26/centerblock.jpg') center; background-size: cover; width: 100%; padding-bottom: 90%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">Surfacing the top. Luckily, it didn't crack on the way.</figcaption>
+    
+</figure>
+
+<p>I did notice today that setting up the top for the topside carve that it wouldn’t adhere to the glue when I was gluing it down to the machine bed. Further inspection
+made me realize that the top was cupping ever so slightly, so I had to apply body weight to actually get it to adhere.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-26/step.jpg') center; background-size: cover; width: 100%; padding-bottom: 90%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">I'm actually standing on the machine bed to get this to glue down</figcaption>
+    
+</figure>
+
+<p>Note this down? Because this becomes important later.</p>
+
+<p>After machining the top, I didn’t want to make the same mistake of trying to chisel out the tabs, so I opted to hand cut them instead.
+I started with a coping saw, but got impatient and cut it out with the bandsaw. I accidentally nicked the top a little bit while I was adjusting,
+and almost had a heart attack. Luckily, the nick is minimal, and I will probably remove that material anyway making the binding channel,
+so not much is lost.</p>
+
+<p>While the bottom side was being carved on the CNC, I spent some time smoothing out the top and planning the f-holes. Something about it didn’t seem right
+when I laid it out, so I chose to sleep on the thought. I might design my own f-holes to go on this guitar; may as well since I’ve mentally deviated from the
+original idea of the p93 styling.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-26/f-holes.jpg') center; background-size: cover; width: 100%; padding-bottom: 90%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">F-hole layout. Notice the nick on the guitar?</figcaption>
+    
+</figure>
+
+<p>So remember the note about the top bowing? As it turns out, the blank I was using for the bottom was bowing as well. This, however, was bowing enough
+that it actually overcame the adhesive; either I just didn’t press down hard enough when putting the piece down, or it just came undone due to the force.
+This actually caused an inconsistency in the thickness of the top: <strong>at its lowest, it is half if not less than the thickness it’s supposed to be.</strong></p>
+
+<figure style="width: 100%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-26/thickness.jpg') center; background-size: cover; width: 100%; padding-bottom: 57%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">Left: original 5mm thickness<br />Right: the bowed up side...</figcaption>
+    
+</figure>
+
+<p>This creates a couple of issues:</p>
+<ul>
+  <li>The finishing carve, which I didn’t do yet, will either not properly round off since it’s too low, or worse case, may mill right through the bottom since it’s bowing upwards.</li>
+  <li>The thinness of the bottom might not leave me enough play room to sand and smooth.</li>
+  <li>The acoustic integrity of the guitar <em>might</em> be compromised since it’s so thin in some regions.</li>
+</ul>
+
+<p>This leaves me with two options:</p>
+<ol>
+  <li>Make a new bottom</li>
+  <li>Make do with this discrepancy</li>
+</ol>
+
+<p>Judging by the delta in change—about 2mm over the width of 381mm, so &gt; 0.005mm in height every 1mm along the width—I’m inclined to say I can make do with this top.
+Only tomorrow will really tell if I can make do with this top. If it ends up cutting through, I’ll need to find more figured maple to make the bottom. 
+If I do end up using this top, it should be generally unnoticeable that there is a height difference in the first place; it’s such a gentle difference that probably won’t be felt 
+unless you’re looking for it.</p>
+
+<p>Tomorrow’s goals are to try and get this glued up. I don’t have any spool clamps, and I don’t really want to wait for the materials to make them, so I’ll have to make do with another idea.
+I’ll also need to buy some binding, and possibly some perfling. That’s for a later time.</p>
+
+<p>That’s all for now. Hopefully I can right my wrongs tomorrow.</p>]]></content><author><name></name></author><category term="art" /><category term="woodworking" /><category term="guitar" /><category term="makerspace" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Luthery Log 1: Starcaster Build</title><link href="/blog/luther1.html" rel="alternate" type="text/html" title="Luthery Log 1: Starcaster Build" /><published>2022-07-25T00:00:00+00:00</published><updated>2022-07-25T00:00:00+00:00</updated><id>/blog/luther1</id><content type="html" xml:base="/blog/luther1.html"><![CDATA[<p>I have had this dream: to own some kind of semi-hollow guitar of my own making.</p>
 
 <p><br /></p>
 
