@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-27T04:42:04+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Luthery Log 2: Starcaster Build Goes Somewhat Wrong</title><link href="/blog/luther2.html" rel="alternate" type="text/html" title="Luthery Log 2: Starcaster Build Goes Somewhat Wrong" /><published>2022-07-26T00:00:00+00:00</published><updated>2022-07-26T00:00:00+00:00</updated><id>/blog/luther2</id><content type="html" xml:base="/blog/luther2.html"><![CDATA[<p>Today I focused on getting the top and bottom carved out.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-28T03:01:36+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Luthery Log 3: Starcaster Body Gets Put Together</title><link href="/blog/luther3.html" rel="alternate" type="text/html" title="Luthery Log 3: Starcaster Body Gets Put Together" /><published>2022-07-27T00:00:00+00:00</published><updated>2022-07-27T00:00:00+00:00</updated><id>/blog/luther3</id><content type="html" xml:base="/blog/luther3.html"><![CDATA[<p>Finishing up the assembly of this body today.</p>
+
+<p>I got the bottom machined out, and luckily it was only a minor cleanup job to get it to look as good as the top.
+There isn’t really anything else past that; I guess I worried for nothing. The thickness didn’t even seem to be an issue;
+it was really just a thickness issue in one corner of the bottom, so no issues there.</p>
+
+<p>I ended up choosing Telecaster Thinline f-holes to put on the Starcaster. In my head I thought that the only way to get these cut out right would be by hand,
+so that you can make the sides of the cutout be perpendicular to the curvature of the top carve. I used a drill to hog out some material to put a coping saw blade through,
+and just went to work. Smoothing the edges was done using a large flat file, and a round rasp, then finishing using some 80 grit sandpaper and some small files. The holes aren’t
+perfect, but they look pretty good to me.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-27/tops.jpg') center; background-size: cover; width: 100%; padding-bottom: 75%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>Gluing up was done all in one job, regrettably. In retrospect I could’ve gotten away with gluing down the bottom first, then the top after the bottom cures, but I decided to try and
+do both at the same time since I was impatient. I aimed to minimize squeeze-out in the body since cleaning the inside of glue would be a hard challenge, but I may have added too much to the centerblock. 
+Conversely, the amount I added to the sides for glue might’ve actually been not enough, since those areas had basically no squeeze out. I think if I were to redo this (which I might need to),
+I would have just applied glue to one mating surface instead of both, since applying to both took too much time, allowing the glue to dry before working it.</p>
+
+<p>I used whatever clamps I could: I tried to use as many wooden screw clamps as I could fit since those were the least likely to damage the top and bottom, 
+but had to grab some other plastic clamps and some E-Z Grip clamps. I’m worried that the amount of time putting down glue and spreading it caused alot of it to dry up
+prematurely, but the majority of it seemed wet and workable when I put the body together. Luckily, any glue-up seams will be covered up with binding, so hopefully those edges are pretty protected.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-07-27/glueup.png') center; background-size: cover; width: 100%; padding-bottom: 100%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>With the body done, I’m going to need to figure out how to use the routing channel jig that we have laying in storage. I had a carrier from LMII ordered so that the body can be held
+square with the table during routing, but I still don’t really know how to use that, much less in conjunction with our routing jig.</p>]]></content><author><name></name></author><category term="art" /><category term="woodworking" /><category term="guitar" /><category term="makerspace" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Luthery Log 2: Starcaster Build Goes Somewhat Wrong</title><link href="/blog/luther2.html" rel="alternate" type="text/html" title="Luthery Log 2: Starcaster Build Goes Somewhat Wrong" /><published>2022-07-26T00:00:00+00:00</published><updated>2022-07-26T00:00:00+00:00</updated><id>/blog/luther2</id><content type="html" xml:base="/blog/luther2.html"><![CDATA[<p>Today I focused on getting the top and bottom carved out.</p>
 
 <p>Unfortunately, things did not go quite as planned, but such is the way of life.</p>
 
