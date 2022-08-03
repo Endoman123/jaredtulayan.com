@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-28T03:01:36+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Luthery Log 3: Starcaster Body Gets Put Together</title><link href="/blog/luther3.html" rel="alternate" type="text/html" title="Luthery Log 3: Starcaster Body Gets Put Together" /><published>2022-07-27T00:00:00+00:00</published><updated>2022-07-27T00:00:00+00:00</updated><id>/blog/luther3</id><content type="html" xml:base="/blog/luther3.html"><![CDATA[<p>Finishing up the assembly of this body today.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-08-03T06:24:36+00:00</updated><id>/feed.xml</id><title type="html">Jared Tulayan</title><subtitle>Rutgers Computer Science student</subtitle><entry><title type="html">Luthery Log 4: Milling Mistakes</title><link href="/blog/luther4.html" rel="alternate" type="text/html" title="Luthery Log 4: Milling Mistakes" /><published>2022-08-03T00:00:00+00:00</published><updated>2022-08-03T00:00:00+00:00</updated><id>/blog/luther4</id><content type="html" xml:base="/blog/luther4.html"><![CDATA[<p>I got busy over the past couple of days, so this log will cover the past couple of days of work.</p>
+
+<p>First day was spent routing out the body. I got around to making a template in CAD, then using the CNC to cut it out onto 3/4” plywood.
+I needed it thick enough so that the pattern bearing for the 1/4” bit could run along it. It seemed to work well, though I accidentally
+milled a little too deep for the last pickup cavity as well as the neck pocket. The pockets all seem to be a little too small to take in
+their respective parts, but that should be fine with a little bit of sanding/post-process.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-08-03/template.jpg') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>At the time of routing these out, I had to wait for some parts to test fit the rest of them, so in the meanwhile, I began milling the guitar neck.</p>
+
+<p>The milling process for the neck is as follows:</p>
+<ol>
+  <li>Rout out the tuner holes (and screw holes if applicable, but I didn’t have tuners to design in)</li>
+  <li>Carve the back neck profile</li>
+  <li>Mill out the truss rod slot, insert truss rod and glue on fretboard</li>
+  <li>Rout the inlay</li>
+  <li>Cut the fret slots</li>
+  <li>Carve the fretboard radius and other neck features</li>
+  <li>Cut out the neck</li>
+</ol>
+
+<p>I only had time for steps 1 and 2 this night. I ran the roughing job while I was routing the neck plane pockets, and watched the finishing pass.
+My first mistake was not adding enough padding past the neck in the roughing pass. This caused some issues with the finishing pass, particularly when it
+moved up to pass over the heel; because it was actually cutting into material since there was no padding, it ended up pulling the bit down and out of the
+collet. This trend seemed to keep up into the next day.</p>
+
+<figure style="width: 75%;" class="md-figure">
+    <div style="background: url('/assets/2022-08-03/mill-mistake.jpg') center; background-size: cover; width: 100%; padding-bottom: 80%;" class="md-figure__image"></div>
+    
+        <figcaption class="md-figure__caption p-3">You can see at the top of the heel and the bottom of the headstock where the router milled into</figcaption>
+    
+</figure>
+
+<p>With some scrap, I just filled in the milled parts. Hopefully the parts aren’t too conspicuous.</p>
+
+<figure style="width: 75%;" class="md-figure">
+    <div style="background: url('/assets/2022-08-03/mill-fix.jpg') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>The next day I had my Tune-o-matic parts on me, so I used them to test fit the holes and placements of them.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-08-03/testfit.jpg') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>These looked in place, so I went ahead and drilled the holes using a 29/64” (~0.4531” or ~11.5mm) brad-point drill bit.
+I tried to tilt the drill bit forward for the hardtail holes to make the hardtail lay “flat”, which may have thrown the hardtail slightly off alignment.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-08-03/rout.jpg') center; background-size: cover; width: 100%; padding-bottom: 120%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>Finishing up, I managed to clean up the backside enough to get it onto the CNC and rout out the truss rod. The rod doesn’t fit in yet;
+it needs some adjustment to get it in, but it is 90% of the way there.</p>
+
+<figure style="width: 50%;" class="md-figure">
+    <div style="background: url('/assets/2022-08-03/truss.jpg') center; background-size: cover; width: 100%; padding-bottom: 80%;" class="md-figure__image"></div>
+    
+</figure>
+
+<p>I still need to make an adapter plate for our binding router jig so that we can use our DeWalt router with it, as well as create the inlay designs
+to mill out both the negatives and the actual inlay pieces. Even with all that, the end draws near. I’m very excited to see what this guitar will
+look like when it’s done.</p>]]></content><author><name></name></author><category term="art" /><category term="woodworking" /><category term="guitar" /><category term="makerspace" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Luthery Log 3: Starcaster Body Gets Put Together</title><link href="/blog/luther3.html" rel="alternate" type="text/html" title="Luthery Log 3: Starcaster Body Gets Put Together" /><published>2022-07-27T00:00:00+00:00</published><updated>2022-07-27T00:00:00+00:00</updated><id>/blog/luther3</id><content type="html" xml:base="/blog/luther3.html"><![CDATA[<p>Finishing up the assembly of this body today.</p>
 
 <p>I got the bottom machined out, and luckily it was only a minor cleanup job to get it to look as good as the top.
 There isn’t really anything else past that; I guess I worried for nothing. The thickness didn’t even seem to be an issue;
