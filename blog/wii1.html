@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!--Basic header defaults-->
+
+<!--Needed meta information-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<!--Style imports-->
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="https://kit.fontawesome.com/bd41fba6db.js" crossorigin="anonymous"></script>
+
+<!--
+  PrismJS. Probably shouldn't load this here.
+  Oh well.
+-->
+<script src="/assets/js/prism.js"></script>
+
+<!--Site Title-->
+<title>
+
+        Wii Modding Escapades: Prologue :: Jared Tulayan
+
+</title>
+
+  </head>
+  <body class="content content--filled flexbox flexbox--col p-4 mx-auto">
+<header class="flexbox flexbox--row flexbox--a--center">
+    <!--Navbar Brand-->
+    <a href="/">Jared Tulayan</a>
+    
+    <!--Breadcrumbs-->
+    <p class="my-auto ml-3">
+      
+      
+        <span>>
+        
+          <a href="/blog/" class="text-secondary">blog</a>
+        
+        </span>
+      
+        <span>>
+        
+          wii1.html
+        
+        </span>
+      
+    </p>
+    
+    <!--Navbar Menu-->
+    <nav class="flexbox flexbox--row flexbox--cg--3 ml-auto">
+      
+        <a class="button" href="/about.html" >About</a>
+      
+        <a class="button" href="/projects" >Projects</a>
+      
+        <a class="button" href="/blog" >Blog</a>
+        
+    </nav>
+</header>
+
+<div class="flexbox flexbox--col mt-2 mb-3">
+  <h1 class="mb-2">Wii Modding Escapades: Prologue</h1>
+  
+    <p class="mb-2"><i class="fas fa-calendar-day"></i> 2022-12-13</p>
+  
+  
+    <p class="text-muted mt-auto">
+      
+      
+        #electronics
+      
+        #wii
+      
+    </p> 
+  
+  
+  <hr class="separator-strong">
+</div>
+<main class="md">
+  <p>Recently I got around to modding Wii’s, particularly because my friend suddenly wanted his modded.</p>
+
+<p>Honestly I forgot just how versatile these consoles were, and being older and more experienced had me more
+confident in being able to fix my bricked Wii.</p>
+
+<p>For context, about 4 years ago I modded my own Wii, but in a manner that was quite unwise. Basically,
+I installed a bad system theme twice. The first time that I saw my Wii fail to boot, I used Priiloader to load
+into BootMii to reset the NAND to before Priiloader and BootMii. I reinstalled the bad theme, 
+and ended up with a Wii unable to boot at all, with no anti-brick measures to access. At the time, there were no methods to recover from a brick like this, at least not without a modchip. At this point, I gave up, and left my
+Wii in storage for a bit of time.</p>
+
+<p>For those of you interested in actually modding your wii, you can avoid what I’ve done with these tips:</p>
+<ul>
+  <li><strong>INSTALL ANTI-BRICK TOOLS!!</strong> More importantly, don’t do any actions that would involve wiping your NAND to a state without said tools. Try not to panic and revert your NAND back using BootMii like I did.</li>
+  <li>Don’t theme your system menu. If you’re like me, you’re probably going to use an USB loader. Just theme that.</li>
+  <li>If you do want a themed system menu, do it on emulated NAND. It’s essentially your flash NAND memory emulated on your external drive. This means that it won’t affect the operability of your actual Wii.</li>
+  <li>If you seriously want to theme your real NAND system menu, and the theme ends up stopping your Wii from booting up, just revert to the regular system menu by reinstalling the default system menu WAD for the version you were using before. You can download the WAD from the NUS Downloader, and you can load into MyThemeify Mod through Priiloader.</li>
+</ul>
+
+<p>Fast forward to today (or more specifically, 3 weeks ago as of writing this), and I’ve gotten more comfortable with soldering on PCBs, and I have a disposable income to buy parts. Because of this, more techniques are on the
+table to get this Wii up and running again.</p>
+
+<p>On first research on this topic, Bluebomb had been what I was hoping to use. Simply put, it transmits a payload through the Wii’s bluetooth module that allows it to launch homebrew. At first glance I thought it would work
+for my console, but it wasn’t working when I tried using it on my Wii. It would simply get stuck on <code class="language-plaintext highlighter-rouge">Awaiting response from stage0</code>.</p>
+
+<p>So from there, my only option was to autoboot a game from the recovery menu and run an exploit on the autobooted game. This would require a GameCube Controller for a function called <em>SaveMiiFrii</em>, a modchip, and by extension,
+a D2A/D2B disc drive for my Wii.</p>
+
+<p>That’s the game plan. I’ll go over each stage in different posts.</p>
+</main>
+<footer class="flexbox flexbox--col flexbox--rg--1 pt-3 mt-auto">
+  <h5>Contact Me:</h5>
+  
+    <a href="mailto:jared@jaredtulayan.xyz" target="_blank" class=""><i class="fas fa-envelope mr-1"></i>jared@jaredtulayan.xyz</a>
+  
+    <a href="tel:+16093614018" target="_blank" class=""><i class="fas fa-phone-alt mr-1"></i>+1 (609) 361-4018</a>
+  
+    <a href="" target="_blank" class=""><i class="fas fa-paper-plane mr-1"></i>@Endoman123</a>
+  
+  <div class="flexbox flexbox--row flexbox--cg--2 mt-2">
+  
+    <a href="https://github.com/Endoman123" target="_blank" class=""><i class="fab fa-github mr-1"></i></a>
+  
+    <a href="https://instagram.com/jared.tulayan" target="_blank" class=""><i class="fab fa-instagram mr-1"></i></a>
+  
+  </div>
+  <p class="mt-2">Jared Tulayan © 2022 :: Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-muted">Jekyll</a> :: <a href="https://github.com/Endoman123/jaredtulayan.xyz" target="_blank">View Source</a></p>
+</footer>
+
+</body>
+
+</html>
